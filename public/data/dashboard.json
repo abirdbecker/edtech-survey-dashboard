@@ -1,0 +1,17 @@
+{
+  "generated": "2026-02-20T00:00:00.000Z",
+  "totalResponses": 0,
+  "byCounty": {},
+  "screenTimeSentiment": {
+    "Too much": 0,
+    "Just right": 0,
+    "Not enough": 0,
+    "No opinion": 0
+  },
+  "concernsTopLine": {
+    "Yes": 0,
+    "No": 0
+  },
+  "concernsBreakdown": {},
+  "policies": {}
+}

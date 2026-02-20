@@ -1,8 +1,8 @@
 {
-  "generated": "2026-02-20T23:18:40.758Z",
-  "totalResponses": 191,
+  "generated": "2026-02-20T23:52:22.792Z",
+  "totalResponses": 192,
   "byCounty": {
-    "Montgomery": 63,
+    "Montgomery": 64,
     "Allegheny": 38,
     "Delaware": 36,
     "Bucks": 29,
@@ -18,11 +18,11 @@
     "Too much": 226,
     "Just right": 55,
     "Not enough": 0,
-    "No opinion": 18
+    "No opinion": 21
   },
   "concernsTopLine": {
     "Yes": 155,
-    "No": 36
+    "No": 37
   },
   "concernsBreakdown": {
     "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 145,
@@ -34,13 +34,13 @@
     "Data privacy and security": 59
   },
   "policies": {
-    "Prohibit recreational screen use during the school day": 170,
-    "Paper-and-pencil homework only for elementary school": 152,
+    "Prohibit recreational screen use during the school day": 171,
+    "Paper-and-pencil homework only for elementary school": 153,
     "Invest in teacher training and resources for non-digital instruction": 149,
     "Parental access to student device activity": 146,
     "Guarantee right to opt out of unproven EdTech and AI": 135,
     "Require explicit opt-in for generative AI tools": 134,
-    "Keep school devices at school in elementary, limit take-home in middle school": 130,
+    "Keep school devices at school in elementary, limit take-home in middle school": 131,
     "Parental consent for each data-collecting app or website": 126,
     "Reconsider the 1:1 device model and return to shared devices in K-8": 96
   }

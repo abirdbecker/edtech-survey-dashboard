@@ -50,6 +50,14 @@ function parseMultiSelect(raw) {
   return raw.split(',').map(v => v.trim()).filter(Boolean);
 }
 
+/** Match raw cell value against a list of known option strings.
+ *  Handles options that themselves contain commas by doing substring
+ *  matching rather than naive comma-splitting. */
+function parseKnownOptions(raw, knownOptions) {
+  if (!raw) return [];
+  return knownOptions.filter(opt => raw.includes(opt));
+}
+
 // --- Main ---
 async function main() {
   console.log('Fetching sheet data...');
@@ -113,8 +121,8 @@ async function main() {
     const hasConcerns = getCell(row, 'hasConcerns');
     if (hasConcerns === 'Yes') {
       concernsTopLine.Yes++;
-      // Concerns breakdown (Q9b) — comma-separated
-      const concernList = parseMultiSelect(getCell(row, 'concerns'));
+      // Concerns breakdown (Q9b) — match against known options to handle commas in option text
+      const concernList = parseKnownOptions(getCell(row, 'concerns'), fieldMap.concernOptions);
       for (const concern of concernList) {
         if (concern !== 'Other') {
           increment(concernsBreakdown, concern);
@@ -124,8 +132,8 @@ async function main() {
       concernsTopLine.No++;
     }
 
-    // Policy preferences (Q11) — comma-separated
-    const policyList = parseMultiSelect(getCell(row, 'policies'));
+    // Policy preferences (Q11) — match against known options to handle commas in option text
+    const policyList = parseKnownOptions(getCell(row, 'policies'), fieldMap.policyOptions);
     for (const policy of policyList) {
       if (policy !== 'Other') {
         increment(policies, policy);

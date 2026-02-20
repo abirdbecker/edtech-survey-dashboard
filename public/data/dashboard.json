@@ -1,17 +1,47 @@
 {
-  "generated": "2026-02-20T00:00:00.000Z",
-  "totalResponses": 0,
-  "byCounty": {},
+  "generated": "2026-02-20T22:59:16.394Z",
+  "totalResponses": 189,
+  "byCounty": {
+    "Montgomery": 63,
+    "Allegheny": 38,
+    "Delaware": 35,
+    "Bucks": 28,
+    "Chester": 13,
+    "Philadelphia": 4,
+    "Lancaster": 2,
+    "Butler": 2,
+    "Lehigh": 2,
+    "Lebanon": 1,
+    "Lawrence": 1
+  },
   "screenTimeSentiment": {
-    "Too much": 0,
-    "Just right": 0,
+    "Too much": 224,
+    "Just right": 55,
     "Not enough": 0,
-    "No opinion": 0
+    "No opinion": 17
   },
   "concernsTopLine": {
-    "Yes": 0,
-    "No": 0
+    "Yes": 153,
+    "No": 36
   },
-  "concernsBreakdown": {},
-  "policies": {}
+  "concernsBreakdown": {
+    "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 143,
+    "Impact on attention span and focus": 134,
+    "Impact on social skills and peer interaction": 122,
+    "Exposure to inappropriate content despite school filters": 106,
+    "Eye strain or physical health effects": 87,
+    "School devices undermining family screen time rules at home": 87,
+    "Data privacy and security": 59
+  },
+  "policies": {
+    "Prohibit recreational screen use during the school day": 168,
+    "Paper-and-pencil homework only for elementary school": 150,
+    "Invest in teacher training and resources for non-digital instruction": 147,
+    "Parental access to student device activity": 144,
+    "Guarantee right to opt out of unproven EdTech and AI": 133,
+    "Require explicit opt-in for generative AI tools": 132,
+    "Keep school devices at school in elementary, limit take-home in middle school": 128,
+    "Parental consent for each data-collecting app or website": 124,
+    "Reconsider the 1:1 device model and return to shared devices in K-8": 94
+  }
 }

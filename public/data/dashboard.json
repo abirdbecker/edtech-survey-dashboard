@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-21T04:24:03.894Z",
+  "generated": "2026-02-21T04:28:24.680Z",
   "totalResponses": 219,
   "byCounty": {
     "Montgomery": 74,
@@ -2909,6 +2909,237 @@
         "Paper-and-pencil homework only for elementary school": 1,
         "Prohibit recreational screen use during the school day": 1,
         "Guarantee right to opt out of unproven EdTech and AI": 1,
+        "Parental access to student device activity": 1,
+        "Invest in teacher training and resources for non-digital instruction": 1
+      }
+    }
+  },
+  "bySchoolType": {
+    "Public school": {
+      "totalResponses": 200,
+      "byCounty": {
+        "Montgomery": 68,
+        "Delaware": 38,
+        "Allegheny": 37,
+        "Bucks": 31,
+        "Chester": 15,
+        "Philadelphia": 5,
+        "Lancaster": 2,
+        "Butler": 2,
+        "Lebanon": 1,
+        "Lawrence": 1
+      },
+      "screenTimeSentiment": {
+        "Too much": 245,
+        "Just right": 53,
+        "Not enough": 0,
+        "No opinion": 20,
+        "I don't know": 8
+      },
+      "anyTooMuch": 165,
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 96,
+          "Just right": 19,
+          "Not enough": 0,
+          "No opinion": 8,
+          "I don't know": 4
+        },
+        "3-5": {
+          "Too much": 82,
+          "Just right": 20,
+          "Not enough": 0,
+          "No opinion": 5,
+          "I don't know": 2
+        },
+        "6-8": {
+          "Too much": 45,
+          "Just right": 10,
+          "Not enough": 0,
+          "No opinion": 4,
+          "I don't know": 1
+        },
+        "9-12": {
+          "Too much": 22,
+          "Just right": 4,
+          "Not enough": 0,
+          "No opinion": 3,
+          "I don't know": 1
+        }
+      },
+      "commsRating": {
+        "Very poorly": 49,
+        "Poorly": 73,
+        "Neutral": 54,
+        "Well": 19,
+        "Very well": 5
+      },
+      "concernsTopLine": {
+        "Yes": 167,
+        "No": 33
+      },
+      "concernsBreakdown": {
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 155,
+        "Impact on attention span and focus": 144,
+        "Impact on social skills and peer interaction": 128,
+        "Exposure to inappropriate content despite school filters": 112,
+        "School devices undermining family screen time rules at home": 94,
+        "Eye strain or physical health effects": 92,
+        "Data privacy and security": 61
+      },
+      "policies": {
+        "Prohibit recreational screen use during the school day": 181,
+        "Paper-and-pencil homework only for elementary school": 160,
+        "Invest in teacher training and resources for non-digital instruction": 158,
+        "Parental access to student device activity": 151,
+        "Require explicit opt-in for generative AI tools": 140,
+        "Guarantee right to opt out of unproven EdTech and AI": 139,
+        "Keep school devices at school in elementary, limit take-home in middle school": 135,
+        "Parental consent for each data-collecting app or website": 124,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 104
+      }
+    },
+    "Private/Independent school": {
+      "totalResponses": 18,
+      "byCounty": {
+        "Montgomery": 6,
+        "Delaware": 4,
+        "Allegheny": 3,
+        "Bucks": 3,
+        "Chester": 1,
+        "Lehigh": 1
+      },
+      "screenTimeSentiment": {
+        "Too much": 11,
+        "Just right": 10,
+        "Not enough": 0,
+        "No opinion": 1,
+        "I don't know": 0
+      },
+      "anyTooMuch": 9,
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 4,
+          "Just right": 7,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 2,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 3,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 6,
+        "Neutral": 0,
+        "Well": 6,
+        "Very well": 5
+      },
+      "concernsTopLine": {
+        "Yes": 10,
+        "No": 8
+      },
+      "concernsBreakdown": {
+        "Impact on attention span and focus": 10,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 10,
+        "Impact on social skills and peer interaction": 9,
+        "School devices undermining family screen time rules at home": 9,
+        "Eye strain or physical health effects": 8,
+        "Data privacy and security": 7,
+        "Exposure to inappropriate content despite school filters": 6
+      },
+      "policies": {
+        "Parental access to student device activity": 16,
+        "Prohibit recreational screen use during the school day": 15,
+        "Parental consent for each data-collecting app or website": 15,
+        "Invest in teacher training and resources for non-digital instruction": 14,
+        "Guarantee right to opt out of unproven EdTech and AI": 13,
+        "Keep school devices at school in elementary, limit take-home in middle school": 12,
+        "Paper-and-pencil homework only for elementary school": 12,
+        "Require explicit opt-in for generative AI tools": 12,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 8
+      }
+    },
+    "Charter school": {
+      "totalResponses": 1,
+      "byCounty": {
+        "Lehigh": 1
+      },
+      "screenTimeSentiment": {
+        "Too much": 0,
+        "Just right": 1,
+        "Not enough": 0,
+        "No opinion": 0,
+        "I don't know": 0
+      },
+      "anyTooMuch": 0,
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 1
+      },
+      "concernsTopLine": {
+        "Yes": 0,
+        "No": 1
+      },
+      "concernsBreakdown": {},
+      "policies": {
+        "Paper-and-pencil homework only for elementary school": 1,
+        "Prohibit recreational screen use during the school day": 1,
+        "Require explicit opt-in for generative AI tools": 1,
+        "Guarantee right to opt out of unproven EdTech and AI": 1,
+        "Parental consent for each data-collecting app or website": 1,
         "Parental access to student device activity": 1,
         "Invest in teacher training and resources for non-digital instruction": 1
       }

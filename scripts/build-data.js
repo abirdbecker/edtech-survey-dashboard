@@ -33,6 +33,28 @@ const auth = new google.auth.GoogleAuth({
 });
 const sheets = google.sheets({ version: 'v4', auth });
 
+const VIVID_WORDS = [
+  'addict', 'distract', 'anxious', 'anxiety', 'mental health', 'worried',
+  'struggling', 'harm', 'damage', 'social media', 'hours', 'behavior',
+  'focus', 'attention', 'bully', 'sleep', 'stress', 'overwhelm',
+  'constantly', 'concerned', 'frustrated', 'disappointed', 'scared',
+  'research', 'evidence', 'inappropriate', 'limit', 'ban', 'policy',
+  'never', 'always', 'every day', 'all day', 'cannot', "can't",
+];
+
+function scoreQuote(text) {
+  const trimmed = text.trim();
+  const len = trimmed.length;
+  if (len < 70) return 0;
+  const lower = trimmed.toLowerCase();
+  let score = Math.min(len / 400, 1) * 40;
+  for (const word of VIVID_WORDS) {
+    if (lower.includes(word)) score += 6;
+  }
+  if (/[.!?]$/.test(trimmed)) score += 5;
+  return score;
+}
+
 const BAND_FIELDS = [
   { field: 'deviceTime_K-2', band: 'K-2' },
   { field: 'deviceTime_3-5', band: '3-5' },
@@ -173,11 +195,18 @@ async function main() {
 
   const global = emptyBucket();
   const byDistrict = {};
+  const quotePool = [];
 
   for (const row of dataRows) {
     if (!row || row.every(c => !c)) continue;
 
     aggregateRow(global, row, getCell);
+
+    const detail = getCell(row, 'concernDetails');
+    if (detail) {
+      const score = scoreQuote(detail);
+      if (score > 0) quotePool.push({ text: detail.trim(), score });
+    }
 
     let district = getCell(row, 'district');
     if (!district || district.toLowerCase().includes('other')) {
@@ -188,6 +217,10 @@ async function main() {
       aggregateRow(byDistrict[district], row, getCell);
     }
   }
+
+  quotePool.sort((a, b) => b.score - a.score);
+  const featuredQuotes = quotePool.slice(0, 8).map(q => q.text);
+  console.log(`Quote pool: ${quotePool.length} scored, using top ${featuredQuotes.length}`);
 
   const commsTotal = Object.values(global.commsRating).reduce((a, b) => a + b, 0);
   console.log(`Comms rating responses: ${commsTotal}`, global.commsRating);
@@ -201,7 +234,7 @@ async function main() {
     sortedByDistrict[name] = sortBucket(byDistrict[name]);
   }
 
-  writeOutput({ ...sortBucket(global), byDistrict: sortedByDistrict, districts });
+  writeOutput({ ...sortBucket(global), byDistrict: sortedByDistrict, districts, featuredQuotes });
 }
 
 function writeOutput(data) {
@@ -218,6 +251,7 @@ function writeOutput(data) {
     policies: data.policies || {},
     districts: data.districts || [],
     byDistrict: data.byDistrict || {},
+    featuredQuotes: data.featuredQuotes || [],
   };
 
   const outPath = join(ROOT, 'public/data/dashboard.json');

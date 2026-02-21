@@ -469,6 +469,31 @@ body {
   margin-top: 0.75rem;
 }
 
+/* ── Parent Voices quotes ────────────────────────────────── */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+@media (max-width: 640px) {
+  .quotes-grid { grid-template-columns: 1fr; }
+}
+.quote-card {
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+  background: var(--white);
+  border: 1px solid var(--sand);
+  border-left: 4px solid var(--sage);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+}
+.quote-text {
+  font-size: 0.88rem;
+  font-style: italic;
+  color: var(--forest);
+  line-height: 1.55;
+}
+
 /* ── States ──────────────────────────────────────────────── */
 .loading-state, .error-state, .empty-state {
   padding: 2rem;

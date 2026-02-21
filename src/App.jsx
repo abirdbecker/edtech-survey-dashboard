@@ -46,7 +46,7 @@ export default function App() {
               )}
 
               <div className="hero-stats">
-                <div className="hero-stat hero-stat--red">
+                <div className="hero-stat">
                   <div className="hero-stat-pct">
                     {pct(
                       active.screenTimeSentiment?.['Too much'] || 0,
@@ -56,7 +56,7 @@ export default function App() {
                   <div className="hero-stat-label">say there's <strong>too much</strong> screen time at school</div>
                 </div>
 
-                <div className="hero-stat hero-stat--orange">
+                <div className="hero-stat">
                   <div className="hero-stat-pct">
                     {pct(
                       active.concernsTopLine?.Yes || 0,

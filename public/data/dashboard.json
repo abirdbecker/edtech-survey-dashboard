@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-21T04:21:15.620Z",
+  "generated": "2026-02-21T04:24:03.894Z",
   "totalResponses": 219,
   "byCounty": {
     "Montgomery": 74,
@@ -2915,13 +2915,37 @@
     }
   },
   "featuredQuotes": [
-    "I think there's a lot of research showing that computers of any kind are a distraction in class and lead to cognitive overload. I'm a college professor and anecdotally I see major deficits in attention, critical and creative thinking, as well as basic social interaction. I ban all devices in my own classes for this reason.",
-    "These devices are a nightmare for kids with issues with attention span/executive function deficits. They are a massive source of distraction in school and out of school. Some kids are absolutely addicted to screens, and we should not be feeding that addiction at school.",
-    "Have had multiple instances with both children being exposed to inappropriate/ mature content on their school devices, despite school filters. Both of my children have ADHD and screens exacerbate that. My oldest also uses their school device as an 'escape' during class when they are overwhelmed.",
-    "We need all devices out of our schools, save for a few select cases. The research is clear that all devices (laptops, phones, etc.) hinder student learning, focus, and engagement. Technology also represents a large spend, which is an issue in out district.",
-    "I believe it's a slipperly slope and hard to do minimal use.  Meaning I am essentially ok with the minimal screen time they have (although I do think my 2nd grader has slightly too much of it), however I believe they just shouldn't use it in school in general.  Even in small amounts, I wish it was banned altogether.",
-    "My 4th grader is not performing well in school and her online test taking appears to be much worse than pencil and paper. Having questions read aloud is distracting, and the temptation to just click on a button to select an answer and move on makes it easy for her to speed through the test without really thinking.",
-    "For middle school laptops are particularly troublesome in school because the students watch YouTube videos in class, play games on the laptops are a distraction to instruction. At home, it’s especially problematic because our child takes a laptop in to her room play Roblox, chats and emails friends when she’s supposed to be doing homework.",
-    "I'm deeply against the use of generative AI in schools in any grade. I support the consideration of and research into the benefits of analytical AI for teachers, for certain projects, etc, but think generative AI use runs counter to the types of cognitive skills I most want my kids to develop."
+    {
+      "text": "I think there's a lot of research showing that computers of any kind are a distraction in class and lead to cognitive overload. I'm a college professor and anecdotally I see major deficits in attention, critical and creative thinking, as well as basic social interaction. I ban all devices in my own classes for this reason.",
+      "county": "Bucks"
+    },
+    {
+      "text": "These devices are a nightmare for kids with issues with attention span/executive function deficits. They are a massive source of distraction in school and out of school. Some kids are absolutely addicted to screens, and we should not be feeding that addiction at school.",
+      "county": "Allegheny"
+    },
+    {
+      "text": "Have had multiple instances with both children being exposed to inappropriate/ mature content on their school devices, despite school filters. Both of my children have ADHD and screens exacerbate that. My oldest also uses their school device as an 'escape' during class when they are overwhelmed.",
+      "county": "Allegheny"
+    },
+    {
+      "text": "We need all devices out of our schools, save for a few select cases. The research is clear that all devices (laptops, phones, etc.) hinder student learning, focus, and engagement. Technology also represents a large spend, which is an issue in out district.",
+      "county": "Delaware"
+    },
+    {
+      "text": "I believe it's a slipperly slope and hard to do minimal use.  Meaning I am essentially ok with the minimal screen time they have (although I do think my 2nd grader has slightly too much of it), however I believe they just shouldn't use it in school in general.  Even in small amounts, I wish it was banned altogether.",
+      "county": "Bucks"
+    },
+    {
+      "text": "My 4th grader is not performing well in school and her online test taking appears to be much worse than pencil and paper. Having questions read aloud is distracting, and the temptation to just click on a button to select an answer and move on makes it easy for her to speed through the test without really thinking.",
+      "county": "Montgomery"
+    },
+    {
+      "text": "For middle school laptops are particularly troublesome in school because the students watch YouTube videos in class, play games on the laptops are a distraction to instruction. At home, it’s especially problematic because our child takes a laptop in to her room play Roblox, chats and emails friends when she’s supposed to be doing homework.",
+      "county": "Montgomery"
+    },
+    {
+      "text": "I'm deeply against the use of generative AI in schools in any grade. I support the consideration of and research into the benefits of analytical AI for teachers, for certain projects, etc, but think generative AI use runs counter to the types of cognitive skills I most want my kids to develop.",
+      "county": "Philadelphia"
+    }
   ]
 }

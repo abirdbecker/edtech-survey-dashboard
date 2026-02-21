@@ -115,7 +115,7 @@ export default function App() {
                 {!selectedDistrict && data.districts?.length > 0 && ` from ${data.districts.length} school districts`}
               </p>
               <p className="hero-footnote">
-                <sup>1</sup> Counts unique parents who rated at least one grade band as "Too much." Concerns and communication % are per respondent.
+                <sup>1</sup> Represents % of parents who rated at least one grade band as "Too much." Concerns and communication % are per respondent.
               </p>
             </section>
 

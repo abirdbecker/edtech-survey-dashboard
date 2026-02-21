@@ -15,12 +15,16 @@ function pct(numerator, denominator) {
 }
 
 function statStyle(percentage) {
-  // Interpolate hue: 120 (green) at 0% → 0 (red) at 100%, muted saturation
+  // Hue: 120 (green) at 0% → 0 (red) at 100%
+  // Background saturation and darkness increase with percentage so shading is perceptible
   const hue = Math.round(120 - (percentage / 100) * 120);
+  const bgSat = Math.round(18 + (percentage / 100) * 38);   // 18% → 56%
+  const bgL   = Math.round(96 - (percentage / 100) * 9);    // 96% → 87%
+  const accentL = Math.round(46 - (percentage / 100) * 8);  // 46% → 38%
   return {
-    '--stat-accent': `hsl(${hue}, 48%, 48%)`,
-    '--stat-bg':     `hsl(${hue}, 40%, 95%)`,
-    '--stat-border': `hsl(${hue}, 25%, 80%)`,
+    '--stat-accent': `hsl(${hue}, 58%, ${accentL}%)`,
+    '--stat-bg':     `hsl(${hue}, ${bgSat}%, ${bgL}%)`,
+    '--stat-border': `hsl(${hue}, 30%, 75%)`,
   };
 }
 
@@ -109,6 +113,10 @@ export default function App() {
               <p className="hero-footnote">
                 Based on {active.totalResponses.toLocaleString()} survey response{active.totalResponses !== 1 ? 's' : ''}
                 {!selectedDistrict && data.districts?.length > 0 && ` from ${data.districts.length} school districts`}
+              </p>
+              <p className="hero-footnote">
+                Screen time % counts unique parents who rated at least one grade band as "Too much."
+                Concerns and communication % are per respondent. Card shading reflects severity (green = low, red = high).
               </p>
             </section>
 

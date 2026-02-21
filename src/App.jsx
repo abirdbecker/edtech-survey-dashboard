@@ -51,10 +51,7 @@ export default function App() {
               <div className="hero-stats">
                 <div className="hero-stat">
                   <div className="hero-stat-pct">
-                    {pct(
-                      active.screenTimeSentiment?.['Too much'] || 0,
-                      Object.values(active.screenTimeSentiment || {}).reduce((a, b) => a + b, 0)
-                    )}%
+                    {pct(active.anyTooMuch || 0, active.totalResponses)}%
                   </div>
                   <div className="hero-stat-label">say there's <strong>too much</strong> screen time at school</div>
                 </div>

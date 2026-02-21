@@ -68,6 +68,7 @@ function emptyBucket() {
       '9-12': EMPTY_SENTIMENT(),
     },
     commsRating: { 'Very poorly': 0, 'Poorly': 0, 'Neutral': 0, 'Well': 0, 'Very well': 0 },
+    anyTooMuch: 0,
     concernsTopLine: { Yes: 0, No: 0 },
     concernsBreakdown: {},
     policies: {},
@@ -87,6 +88,10 @@ function aggregateRow(bucket, row, getCell) {
       bucket.screenTimeSentiment[val]++;
     }
   }
+
+  // Track if any band said "Too much" (per unique respondent)
+  const tooMuchAnyBand = BAND_FIELDS.some(({ field }) => getCell(row, field) === 'Too much');
+  if (tooMuchAnyBand) bucket.anyTooMuch++;
 
   // Per-band sentiment
   for (const { field, band } of BAND_FIELDS) {
@@ -125,6 +130,7 @@ function sortBucket(b) {
     totalResponses: b.totalResponses,
     byCounty: sortDesc(b.byCounty),
     screenTimeSentiment: b.screenTimeSentiment,
+    anyTooMuch: b.anyTooMuch,
     byGradeBand: b.byGradeBand,
     commsRating: b.commsRating,
     concernsTopLine: b.concernsTopLine,
@@ -203,6 +209,7 @@ function writeOutput(data) {
     generated: new Date().toISOString(),
     totalResponses: data.totalResponses || 0,
     byCounty: data.byCounty || {},
+    anyTooMuch: data.anyTooMuch || 0,
     screenTimeSentiment: data.screenTimeSentiment || {},
     byGradeBand: data.byGradeBand || {},
     commsRating: data.commsRating || {},

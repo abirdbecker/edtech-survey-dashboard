@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { ComposableMap, Geographies, Geography } from 'react-simple-maps';
 
-const GEO_URL = '/data/pa-counties.json';
+const GEO_URL       = '/data/pa-counties.json';
+const STATE_GEO_URL = '/data/pa-state.json';
 
 function getColor(count, maxCount) {
   if (!count || count === 0) return '#e8f5e9';
@@ -48,6 +49,24 @@ export default function CountyMap({ byCounty }) {
                 />
               );
             })
+          }
+        </Geographies>
+        <Geographies geography={STATE_GEO_URL}>
+          {({ geographies }) =>
+            geographies.map(geo => (
+              <Geography
+                key={geo.rsmKey}
+                geography={geo}
+                fill="none"
+                stroke="#5a7a65"
+                strokeWidth={1.8}
+                style={{
+                  default: { outline: 'none', pointerEvents: 'none' },
+                  hover:   { outline: 'none', pointerEvents: 'none' },
+                  pressed: { outline: 'none', pointerEvents: 'none' },
+                }}
+              />
+            ))
           }
         </Geographies>
       </ComposableMap>

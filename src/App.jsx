@@ -66,7 +66,7 @@ export default function App() {
                       (active.concernsTopLine?.Yes || 0) + (active.concernsTopLine?.No || 0)
                     )}%
                   </div>
-                  <div className="hero-stat-label">of parents <strong>report concerns</strong> about device use</div>
+                  <div className="hero-stat-label">of parents report <strong>concerns</strong> about device use</div>
                 </div>
 
                 {commsTotal > 0 && (

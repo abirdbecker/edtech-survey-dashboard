@@ -1,9 +1,9 @@
 const COLORS = {
   'Too much': '#b85c4a',
-  'Just right': '#388e3c',
-  'Not enough': '#f57c00',
-  'No opinion': '#9e9e9e',
-  "I don't know": '#bdbdbd',
+  'Just right': '#4e8c63',
+  'Not enough': '#c8834a',
+  'No opinion': '#a0a090',
+  "I don't know": '#b8b4aa',
 };
 
 export default function SentimentBar({ screenTimeSentiment }) {

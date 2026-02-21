@@ -12,7 +12,7 @@
   --forest-pale:  #eaf2ed;
   --white:        #ffffff;
   --red:          #b85c4a;
-  --orange:       #e65100;
+  --orange:       #c8714f;
   --border:       var(--sand);
   --shadow-sm:    0 1px 3px rgba(45,90,61,0.08);
   --shadow-md:    0 4px 12px rgba(45,90,61,0.1);
@@ -148,8 +148,8 @@ body {
   flex: 1;
   min-width: 200px;
   padding: 1.25rem 1.5rem;
-  background: #fff3e0;
-  border: 1px solid #f5c99a;
+  background: #faf0e8;
+  border: 1px solid #e0c4b0;
   border-radius: var(--radius-sm);
   border-left-width: 4px;
   border-left-color: var(--orange);

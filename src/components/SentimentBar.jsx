@@ -1,5 +1,5 @@
 const COLORS = {
-  'Too much': '#d32f2f',
+  'Too much': '#b85c4a',
   'Just right': '#388e3c',
   'Not enough': '#f57c00',
   'No opinion': '#9e9e9e',

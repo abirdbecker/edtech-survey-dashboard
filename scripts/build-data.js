@@ -48,8 +48,12 @@ function truncateQuote(text) {
   const t = text.trim();
   if (t.length <= MAX_QUOTE_LEN) return t;
   const sub = t.slice(0, MAX_QUOTE_LEN);
-  const lastEnd = Math.max(sub.lastIndexOf('. '), sub.lastIndexOf('! '), sub.lastIndexOf('? '));
-  if (lastEnd > MAX_QUOTE_LEN * 0.35) return t.slice(0, lastEnd + 1).trim();
+  // Prefer paragraph boundary (sentence end before a newline)
+  const paraEnd = Math.max(sub.lastIndexOf('.\n'), sub.lastIndexOf('!\n'), sub.lastIndexOf('?\n'));
+  if (paraEnd > MAX_QUOTE_LEN * 0.35) return t.slice(0, paraEnd + 1).trim();
+  // Fall back to inline sentence boundary
+  const sentEnd = Math.max(sub.lastIndexOf('. '), sub.lastIndexOf('! '), sub.lastIndexOf('? '));
+  if (sentEnd > MAX_QUOTE_LEN * 0.35) return t.slice(0, sentEnd + 1).trim();
   return sub.slice(0, sub.lastIndexOf(' ')).trim() + '\u2026';
 }
 

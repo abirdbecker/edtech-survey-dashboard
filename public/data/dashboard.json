@@ -1,5 +1,5 @@
 {
-  "generated": "2026-02-21T04:19:58.106Z",
+  "generated": "2026-02-21T04:21:15.620Z",
   "totalResponses": 219,
   "byCounty": {
     "Montgomery": 74,
@@ -90,8 +90,8 @@
     "Lower Merion",
     "Upper St. Clair",
     "Jenkintown",
-    "Rose Tree Media",
     "Quaker Valley",
+    "Rose Tree Media",
     "West Chester Area",
     "Pittsburgh",
     "Wissahickon",
@@ -575,81 +575,6 @@
         "Reconsider the 1:1 device model and return to shared devices in K-8": 6
       }
     },
-    "Rose Tree Media": {
-      "totalResponses": 12,
-      "byCounty": {
-        "Delaware": 12
-      },
-      "screenTimeSentiment": {
-        "Too much": 12,
-        "Just right": 3,
-        "Not enough": 0,
-        "No opinion": 3,
-        "I don't know": 0
-      },
-      "anyTooMuch": 8,
-      "byGradeBand": {
-        "K-2": {
-          "Too much": 3,
-          "Just right": 2,
-          "Not enough": 0,
-          "No opinion": 3,
-          "I don't know": 0
-        },
-        "3-5": {
-          "Too much": 5,
-          "Just right": 0,
-          "Not enough": 0,
-          "No opinion": 0,
-          "I don't know": 0
-        },
-        "6-8": {
-          "Too much": 3,
-          "Just right": 1,
-          "Not enough": 0,
-          "No opinion": 0,
-          "I don't know": 0
-        },
-        "9-12": {
-          "Too much": 1,
-          "Just right": 0,
-          "Not enough": 0,
-          "No opinion": 0,
-          "I don't know": 0
-        }
-      },
-      "commsRating": {
-        "Very poorly": 4,
-        "Poorly": 4,
-        "Neutral": 3,
-        "Well": 1,
-        "Very well": 0
-      },
-      "concernsTopLine": {
-        "Yes": 10,
-        "No": 2
-      },
-      "concernsBreakdown": {
-        "Impact on attention span and focus": 8,
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 8,
-        "Impact on social skills and peer interaction": 8,
-        "Eye strain or physical health effects": 6,
-        "Exposure to inappropriate content despite school filters": 6,
-        "School devices undermining family screen time rules at home": 4,
-        "Data privacy and security": 3
-      },
-      "policies": {
-        "Require explicit opt-in for generative AI tools": 10,
-        "Parental access to student device activity": 10,
-        "Prohibit recreational screen use during the school day": 9,
-        "Guarantee right to opt out of unproven EdTech and AI": 8,
-        "Invest in teacher training and resources for non-digital instruction": 8,
-        "Paper-and-pencil homework only for elementary school": 8,
-        "Keep school devices at school in elementary, limit take-home in middle school": 7,
-        "Parental consent for each data-collecting app or website": 7,
-        "Reconsider the 1:1 device model and return to shared devices in K-8": 4
-      }
-    },
     "Quaker Valley": {
       "totalResponses": 12,
       "byCounty": {
@@ -723,6 +648,81 @@
         "Reconsider the 1:1 device model and return to shared devices in K-8": 8,
         "Keep school devices at school in elementary, limit take-home in middle school": 8,
         "Parental consent for each data-collecting app or website": 7
+      }
+    },
+    "Rose Tree Media": {
+      "totalResponses": 11,
+      "byCounty": {
+        "Delaware": 11
+      },
+      "screenTimeSentiment": {
+        "Too much": 10,
+        "Just right": 3,
+        "Not enough": 0,
+        "No opinion": 3,
+        "I don't know": 0
+      },
+      "anyTooMuch": 7,
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 2,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 3,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 5,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 4,
+        "Poorly": 4,
+        "Neutral": 3,
+        "Well": 0,
+        "Very well": 0
+      },
+      "concernsTopLine": {
+        "Yes": 9,
+        "No": 2
+      },
+      "concernsBreakdown": {
+        "Impact on attention span and focus": 7,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 7,
+        "Impact on social skills and peer interaction": 7,
+        "Eye strain or physical health effects": 5,
+        "Exposure to inappropriate content despite school filters": 5,
+        "School devices undermining family screen time rules at home": 4,
+        "Data privacy and security": 3
+      },
+      "policies": {
+        "Require explicit opt-in for generative AI tools": 9,
+        "Parental access to student device activity": 9,
+        "Prohibit recreational screen use during the school day": 8,
+        "Guarantee right to opt out of unproven EdTech and AI": 7,
+        "Invest in teacher training and resources for non-digital instruction": 7,
+        "Paper-and-pencil homework only for elementary school": 7,
+        "Keep school devices at school in elementary, limit take-home in middle school": 6,
+        "Parental consent for each data-collecting app or website": 6,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 4
       }
     },
     "West Chester Area": {
@@ -2921,7 +2921,7 @@
     "We need all devices out of our schools, save for a few select cases. The research is clear that all devices (laptops, phones, etc.) hinder student learning, focus, and engagement. Technology also represents a large spend, which is an issue in out district.",
     "I believe it's a slipperly slope and hard to do minimal use.  Meaning I am essentially ok with the minimal screen time they have (although I do think my 2nd grader has slightly too much of it), however I believe they just shouldn't use it in school in general.  Even in small amounts, I wish it was banned altogether.",
     "My 4th grader is not performing well in school and her online test taking appears to be much worse than pencil and paper. Having questions read aloud is distracting, and the temptation to just click on a button to select an answer and move on makes it easy for her to speed through the test without really thinking.",
-    "My son’s friend has his chrome book out at lunch and pretends he’s doing school work. I don’t like the constant distraction of a screen at what should be a social time. Once during the thanksgiving meal at school, I saw myself this friend was looking at a very gross YouTube video of a toilet and poop or something like that.",
-    "For middle school laptops are particularly troublesome in school because the students watch YouTube videos in class, play games on the laptops are a distraction to instruction. At home, it’s especially problematic because our child takes a laptop in to her room play Roblox, chats and emails friends when she’s supposed to be doing homework."
+    "For middle school laptops are particularly troublesome in school because the students watch YouTube videos in class, play games on the laptops are a distraction to instruction. At home, it’s especially problematic because our child takes a laptop in to her room play Roblox, chats and emails friends when she’s supposed to be doing homework.",
+    "I'm deeply against the use of generative AI in schools in any grade. I support the consideration of and research into the benefits of analytical AI for teachers, for certain projects, etc, but think generative AI use runs counter to the types of cognitive skills I most want my kids to develop."
   ]
 }

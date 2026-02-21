@@ -219,12 +219,19 @@ async function main() {
 
   const global = emptyBucket();
   const byDistrict = {};
+  const bySchoolType = {};
   const quotePool = [];
 
   for (const row of dataRows) {
     if (!row || row.every(c => !c)) continue;
 
     aggregateRow(global, row, getCell);
+
+    const schoolType = getCell(row, 'schoolType');
+    if (schoolType) {
+      if (!bySchoolType[schoolType]) bySchoolType[schoolType] = emptyBucket();
+      aggregateRow(bySchoolType[schoolType], row, getCell);
+    }
 
     const detail = getCell(row, 'concernDetails');
     if (detail) {
@@ -250,6 +257,7 @@ async function main() {
 
   const commsTotal = Object.values(global.commsRating).reduce((a, b) => a + b, 0);
   console.log(`Comms rating responses: ${commsTotal}`, global.commsRating);
+  console.log('School types found:', Object.entries(bySchoolType).map(([k, v]) => `${k}: ${v.totalResponses}`).join(', '));
 
   const districts = Object.entries(byDistrict)
     .sort(([, a], [, b]) => b.totalResponses - a.totalResponses)
@@ -260,7 +268,12 @@ async function main() {
     sortedByDistrict[name] = sortBucket(byDistrict[name]);
   }
 
-  writeOutput({ ...sortBucket(global), byDistrict: sortedByDistrict, districts, featuredQuotes });
+  const sortedBySchoolType = {};
+  for (const [type, bucket] of Object.entries(bySchoolType)) {
+    sortedBySchoolType[type] = sortBucket(bucket);
+  }
+
+  writeOutput({ ...sortBucket(global), byDistrict: sortedByDistrict, districts, bySchoolType: sortedBySchoolType, featuredQuotes });
 }
 
 function writeOutput(data) {
@@ -277,6 +290,7 @@ function writeOutput(data) {
     policies: data.policies || {},
     districts: data.districts || [],
     byDistrict: data.byDistrict || {},
+    bySchoolType: data.bySchoolType || {},
     featuredQuotes: data.featuredQuotes || [],
   };
 

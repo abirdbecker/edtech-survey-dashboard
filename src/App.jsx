@@ -116,7 +116,7 @@ export default function App() {
               </p>
               <p className="hero-footnote">
                 Screen time % counts unique parents who rated at least one grade band as "Too much."
-                Concerns and communication % are per respondent. Card shading reflects severity (green = low, red = high).
+                Concerns and communication % are per respondent.
               </p>
             </section>
 

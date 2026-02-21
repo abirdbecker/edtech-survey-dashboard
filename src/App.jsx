@@ -5,7 +5,7 @@ import Footer from './components/Footer.jsx';
 import DistrictFilter from './components/DistrictFilter.jsx';
 import CountyMap from './components/CountyMap.jsx';
 import CountyTable from './components/CountyTable.jsx';
-import SentimentBar from './components/SentimentBar.jsx';
+import GradeBandSentiment from './components/GradeBandSentiment.jsx';
 import ConcernBreakdown from './components/ConcernBreakdown.jsx';
 import PolicyBreakdown from './components/PolicyBreakdown.jsx';
 
@@ -21,6 +21,9 @@ export default function App() {
   const active = selectedDistrict && data?.byDistrict?.[selectedDistrict]
     ? data.byDistrict[selectedDistrict]
     : data;
+
+  const commsPoor = (active?.commsRating?.['Very poorly'] || 0) + (active?.commsRating?.['Poorly'] || 0);
+  const commsTotal = Object.values(active?.commsRating || {}).reduce((a, b) => a + b, 0);
 
   return (
     <>
@@ -65,6 +68,13 @@ export default function App() {
                   </div>
                   <div className="hero-stat-label">of parents <strong>report concerns</strong> about device use</div>
                 </div>
+
+                {commsTotal > 0 && (
+                  <div className="hero-stat">
+                    <div className="hero-stat-pct">{pct(commsPoor, commsTotal)}%</div>
+                    <div className="hero-stat-label">say their school <strong>communicates poorly</strong> about technology policies</div>
+                  </div>
+                )}
               </div>
 
               {Object.keys(active.concernsBreakdown || {}).length > 0 && (
@@ -98,8 +108,11 @@ export default function App() {
 
             <section className="section">
               <h2 className="section-title">Screen Time Sentiment</h2>
-              <p className="section-desc">How parents feel about the amount of screen time in school</p>
-              <SentimentBar screenTimeSentiment={active.screenTimeSentiment} />
+              <p className="section-desc">How parents feel about the amount of screen time in school — by grade band</p>
+              <GradeBandSentiment
+                byGradeBand={active.byGradeBand || {}}
+                screenTimeSentiment={active.screenTimeSentiment || {}}
+              />
             </section>
 
             <section className="section">

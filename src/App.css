@@ -282,6 +282,47 @@ body {
 .county-table tr:last-child td { border-bottom: none; }
 .county-table tr:hover td { background: var(--forest-pale); }
 
+/* ── Grade band tabs ─────────────────────────────────────── */
+.grade-band-wrap { }
+.band-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.band-tab {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid var(--sand);
+  border-radius: 20px;
+  background: var(--cream);
+  color: var(--forest-mid);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.band-tab:hover { background: var(--warm); }
+.band-tab--active {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: var(--white);
+}
+.band-comparison { margin-bottom: 1.25rem; }
+.band-comparison-hint {
+  font-size: 0.78rem;
+  color: var(--forest-light);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+.band-comparison-row { cursor: pointer; }
+.band-comparison-row:hover .hbar-fill { opacity: 0.8; }
+.band-selected-note {
+  font-size: 0.85rem;
+  color: var(--forest-mid);
+  margin-bottom: 0.75rem;
+}
+
 /* ── Sentiment bar ───────────────────────────────────────── */
 .sentiment-wrap { }
 .sentiment-bar {

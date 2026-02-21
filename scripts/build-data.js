@@ -33,6 +33,17 @@ const auth = new google.auth.GoogleAuth({
 });
 const sheets = google.sheets({ version: 'v4', auth });
 
+const BAND_FIELDS = [
+  { field: 'deviceTime_K-2', band: 'K-2' },
+  { field: 'deviceTime_3-5', band: '3-5' },
+  { field: 'deviceTime_6-8', band: '6-8' },
+  { field: 'deviceTime_9-12', band: '9-12' },
+];
+
+const EMPTY_SENTIMENT = () => ({
+  'Too much': 0, 'Just right': 0, 'Not enough': 0, 'No opinion': 0, "I don't know": 0,
+});
+
 function increment(obj, key) {
   if (!key) return;
   const k = key.trim();
@@ -49,7 +60,14 @@ function emptyBucket() {
   return {
     totalResponses: 0,
     byCounty: {},
-    screenTimeSentiment: { 'Too much': 0, 'Just right': 0, 'Not enough': 0, 'No opinion': 0, "I don't know": 0 },
+    screenTimeSentiment: EMPTY_SENTIMENT(),
+    byGradeBand: {
+      'K-2': EMPTY_SENTIMENT(),
+      '3-5': EMPTY_SENTIMENT(),
+      '6-8': EMPTY_SENTIMENT(),
+      '9-12': EMPTY_SENTIMENT(),
+    },
+    commsRating: { 'Very poorly': 0, 'Poorly': 0, 'Neutral': 0, 'Well': 0, 'Very well': 0 },
     concernsTopLine: { Yes: 0, No: 0 },
     concernsBreakdown: {},
     policies: {},
@@ -62,11 +80,27 @@ function aggregateRow(bucket, row, getCell) {
   const county = getCell(row, 'county');
   if (county) increment(bucket.byCounty, county);
 
+  // Overall screen time sentiment (all bands combined)
   for (const field of fieldMap.sentimentFields) {
     const val = getCell(row, field);
     if (val && val in bucket.screenTimeSentiment) {
       bucket.screenTimeSentiment[val]++;
     }
+  }
+
+  // Per-band sentiment
+  for (const { field, band } of BAND_FIELDS) {
+    const val = getCell(row, field);
+    if (val && val in bucket.byGradeBand[band]) {
+      bucket.byGradeBand[band][val]++;
+    }
+  }
+
+  // School communication rating
+  // NOTE: sheet column may be 'commsRating' or 'communication' depending on Apps Script
+  const comms = getCell(row, 'commsRating') || getCell(row, 'communication');
+  if (comms && comms in bucket.commsRating) {
+    bucket.commsRating[comms]++;
   }
 
   const hasConcerns = getCell(row, 'hasConcerns');
@@ -91,6 +125,8 @@ function sortBucket(b) {
     totalResponses: b.totalResponses,
     byCounty: sortDesc(b.byCounty),
     screenTimeSentiment: b.screenTimeSentiment,
+    byGradeBand: b.byGradeBand,
+    commsRating: b.commsRating,
     concernsTopLine: b.concernsTopLine,
     concernsBreakdown: sortDesc(b.concernsBreakdown),
     policies: sortDesc(b.policies),
@@ -147,6 +183,9 @@ async function main() {
     }
   }
 
+  const commsTotal = Object.values(global.commsRating).reduce((a, b) => a + b, 0);
+  console.log(`Comms rating responses: ${commsTotal}`, global.commsRating);
+
   const districts = Object.entries(byDistrict)
     .sort(([, a], [, b]) => b.totalResponses - a.totalResponses)
     .map(([name]) => name);
@@ -165,6 +204,8 @@ function writeOutput(data) {
     totalResponses: data.totalResponses || 0,
     byCounty: data.byCounty || {},
     screenTimeSentiment: data.screenTimeSentiment || {},
+    byGradeBand: data.byGradeBand || {},
+    commsRating: data.commsRating || {},
     concernsTopLine: data.concernsTopLine || {},
     concernsBreakdown: data.concernsBreakdown || {},
     policies: data.policies || {},

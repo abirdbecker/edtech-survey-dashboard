@@ -3,7 +3,10 @@ export default function Header() {
     <header className="site-header">
       <div className="header-inner">
         <div className="header-main">
-          <h1 className="header-title">Screen Time and Technology Use in PA Schools</h1>
+          <h1 className="header-title">
+            <span className="header-title-line1">Screen Time &amp; Tech Use</span>
+            <span className="header-title-line2">in PA Schools</span>
+          </h1>
           <p className="header-subtitle">Parent/Caregiver Survey Results</p>
         </div>
         <a

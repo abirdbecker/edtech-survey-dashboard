@@ -162,11 +162,11 @@ body {
   flex: 1;
   min-width: 200px;
   padding: 1.25rem 1.5rem;
-  background: #faf0e8;
-  border: 1px solid #e0c4b0;
+  background: var(--stat-bg, #faf0e8);
+  border: 1px solid var(--stat-border, #e0c4b0);
   border-radius: var(--radius-sm);
   border-left-width: 4px;
-  border-left-color: var(--orange);
+  border-left-color: var(--stat-accent, var(--orange));
   box-shadow: var(--shadow-sm);
 }
 .hero-stat-pct {
@@ -174,7 +174,7 @@ body {
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1;
-  color: var(--orange);
+  color: var(--stat-accent, var(--orange));
   margin-bottom: 0.35rem;
 }
 .hero-stat-label { font-size: 0.92rem; color: var(--forest); line-height: 1.4; }

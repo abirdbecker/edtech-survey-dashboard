@@ -14,6 +14,16 @@ function pct(numerator, denominator) {
   return Math.round((numerator / denominator) * 100);
 }
 
+function statStyle(percentage) {
+  // Interpolate hue: 120 (green) at 0% → 0 (red) at 100%, muted saturation
+  const hue = Math.round(120 - (percentage / 100) * 120);
+  return {
+    '--stat-accent': `hsl(${hue}, 48%, 48%)`,
+    '--stat-bg':     `hsl(${hue}, 40%, 95%)`,
+    '--stat-border': `hsl(${hue}, 25%, 80%)`,
+  };
+}
+
 export default function App() {
   const { data, loading, error } = useDashboardData();
   const [selectedDistrict, setSelectedDistrict] = useState(null);
@@ -49,25 +59,31 @@ export default function App() {
               )}
 
               <div className="hero-stats">
-                <div className="hero-stat">
-                  <div className="hero-stat-pct">
-                    {pct(active.anyTooMuch || 0, active.totalResponses)}%
-                  </div>
-                  <div className="hero-stat-label">say there's <strong>too much</strong> screen time at school</div>
-                </div>
+                {(() => {
+                  const tooMuchPct = pct(active.anyTooMuch || 0, active.totalResponses);
+                  return (
+                    <div className="hero-stat" style={statStyle(tooMuchPct)}>
+                      <div className="hero-stat-pct">{tooMuchPct}%</div>
+                      <div className="hero-stat-label">say there's <strong>too much</strong> screen time at school</div>
+                    </div>
+                  );
+                })()}
 
-                <div className="hero-stat">
-                  <div className="hero-stat-pct">
-                    {pct(
-                      active.concernsTopLine?.Yes || 0,
-                      (active.concernsTopLine?.Yes || 0) + (active.concernsTopLine?.No || 0)
-                    )}%
-                  </div>
-                  <div className="hero-stat-label">of parents report <strong>concerns</strong> about device use</div>
-                </div>
+                {(() => {
+                  const concernsPct = pct(
+                    active.concernsTopLine?.Yes || 0,
+                    (active.concernsTopLine?.Yes || 0) + (active.concernsTopLine?.No || 0)
+                  );
+                  return (
+                    <div className="hero-stat" style={statStyle(concernsPct)}>
+                      <div className="hero-stat-pct">{concernsPct}%</div>
+                      <div className="hero-stat-label">of parents report <strong>concerns</strong> about device use</div>
+                    </div>
+                  );
+                })()}
 
                 {commsTotal > 0 && (
-                  <div className="hero-stat">
+                  <div className="hero-stat" style={statStyle(pct(commsPoor, commsTotal))}>
                     <div className="hero-stat-pct">{pct(commsPoor, commsTotal)}%</div>
                     <div className="hero-stat-label">say their school <strong>communicates poorly</strong> about technology policies</div>
                   </div>

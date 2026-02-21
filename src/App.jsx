@@ -9,6 +9,7 @@ import GradeBandSentiment from './components/GradeBandSentiment.jsx';
 import ConcernBreakdown from './components/ConcernBreakdown.jsx';
 import PolicyBreakdown from './components/PolicyBreakdown.jsx';
 import ParentVoices from './components/ParentVoices.jsx';
+import SchoolTypeComparison from './components/SchoolTypeComparison.jsx';
 
 function pct(numerator, denominator) {
   if (!denominator) return 0;
@@ -145,14 +146,6 @@ export default function App() {
               />
             </section>
 
-            {data.featuredQuotes?.length > 0 && (
-              <section className="section">
-                <h2 className="section-title">Parent Voices</h2>
-                <p className="section-desc">In their own words — selected responses from the open-ended concerns question</p>
-                <ParentVoices quotes={data.featuredQuotes} />
-              </section>
-            )}
-
             <section className="section">
               <h2 className="section-title">Policy Preferences</h2>
               <p className="section-desc">Which policy changes parents would support (select all that apply)</p>
@@ -161,6 +154,22 @@ export default function App() {
                 totalResponses={active.totalResponses}
               />
             </section>
+
+            {data.featuredQuotes?.length > 0 && (
+              <section className="section">
+                <h2 className="section-title">Parent Voices</h2>
+                <p className="section-desc">In their own words — selected responses from the open-ended concerns question</p>
+                <ParentVoices quotes={data.featuredQuotes} />
+              </section>
+            )}
+
+            {Object.keys(data.bySchoolType || {}).length >= 2 && (
+              <section className="section">
+                <h2 className="section-title">Public vs. Private</h2>
+                <p className="section-desc">How responses differ by school type</p>
+                <SchoolTypeComparison bySchoolType={data.bySchoolType} />
+              </section>
+            )}
           </>
         )}
       </main>

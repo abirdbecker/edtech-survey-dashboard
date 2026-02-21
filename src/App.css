@@ -2,34 +2,39 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --green-dark:   #1b5e20;
-  --green-mid:    #2e7d32;
-  --green-light:  #e8f5e9;
-  --green-accent: #43a047;
-  --text-dark:    #1a1a1a;
-  --text-mid:     #444;
-  --text-light:   #777;
-  --border:       #e0e0e0;
-  --bg:           #f9fafb;
+  --cream:        #f0ebe0;
+  --warm:         #e6e0d4;
+  --sand:         #d4cdc1;
+  --sage:         #b8bfad;
+  --forest:       #2d5a3d;
+  --forest-mid:   #3d7a52;
+  --forest-light: #5a9a72;
+  --forest-pale:  #eaf2ed;
   --white:        #ffffff;
   --red:          #c62828;
   --orange:       #e65100;
+  --border:       var(--sand);
+  --shadow-sm:    0 1px 3px rgba(45,90,61,0.08);
+  --shadow-md:    0 4px 12px rgba(45,90,61,0.1);
+  --radius:       12px;
+  --radius-sm:    8px;
   --font-display: 'Barlow Condensed', sans-serif;
   --font-body:    'Inter Tight', sans-serif;
 }
 
 body {
   font-family: var(--font-body);
-  background: var(--bg);
-  color: var(--text-dark);
+  background: var(--cream);
+  color: var(--forest);
   line-height: 1.5;
 }
 
 /* ── Header ──────────────────────────────────────────────── */
 .site-header {
-  background: var(--green-dark);
-  color: var(--white);
-  padding: 2rem 1.5rem 1.5rem;
+  background: var(--cream);
+  color: var(--forest);
+  padding: 2.5rem 1.5rem 1.5rem;
+  border-bottom: 2px solid var(--sage);
 }
 .header-inner { max-width: 1000px; margin: 0 auto; }
 .logo-text {
@@ -38,18 +43,21 @@ body {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  opacity: 0.75;
+  color: var(--forest-mid);
 }
 .header-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.05;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
   margin-top: 0.4rem;
+  color: var(--forest);
 }
 .header-subtitle {
   font-size: 1rem;
-  opacity: 0.85;
+  color: var(--forest-mid);
   margin-top: 0.5rem;
 }
 
@@ -67,13 +75,15 @@ body {
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 700;
-  color: var(--green-dark);
-  border-bottom: 2px solid var(--green-light);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--forest);
+  border-bottom: 2px solid var(--sage);
   padding-bottom: 0.4rem;
   margin-bottom: 0.75rem;
 }
 .section-desc {
-  color: var(--text-mid);
+  color: var(--forest-mid);
   font-size: 0.92rem;
   margin-bottom: 1.25rem;
 }
@@ -85,47 +95,47 @@ body {
   gap: 0.75rem;
   flex-wrap: wrap;
   padding: 0.75rem 1rem;
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: var(--forest-pale);
+  border: 1px solid var(--sage);
+  border-radius: var(--radius-sm);
   margin-bottom: 1.75rem;
 }
 .filter-label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-mid);
+  color: var(--forest);
   white-space: nowrap;
 }
 .filter-select {
   font-family: var(--font-body);
   font-size: 0.88rem;
   padding: 0.35rem 0.6rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--sand);
   border-radius: 6px;
-  background: var(--bg);
-  color: var(--text-dark);
+  background: var(--cream);
+  color: var(--forest);
   cursor: pointer;
   flex: 1;
   min-width: 220px;
   max-width: 400px;
 }
-.filter-select:focus { outline: 2px solid var(--green-mid); }
+.filter-select:focus { outline: 2px solid var(--forest-mid); }
 .filter-clear {
   font-size: 0.8rem;
   padding: 0.3rem 0.7rem;
-  border: 1px solid var(--border);
+  border: 1px solid var(--sand);
   border-radius: 6px;
-  background: var(--white);
-  color: var(--text-mid);
+  background: var(--cream);
+  color: var(--forest-mid);
   cursor: pointer;
   white-space: nowrap;
 }
-.filter-clear:hover { background: #fafafa; color: var(--red); border-color: var(--red); }
+.filter-clear:hover { background: var(--warm); color: var(--red); border-color: var(--red); }
 
 /* ── Hero section ────────────────────────────────────────── */
 .district-context {
   font-size: 0.9rem;
-  color: var(--text-mid);
+  color: var(--forest-mid);
   margin-bottom: 1.25rem;
 }
 .hero-stats {
@@ -139,9 +149,10 @@ body {
   min-width: 200px;
   padding: 1.25rem 1.5rem;
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
   border-left-width: 4px;
+  box-shadow: var(--shadow-sm);
 }
 .hero-stat--red    { border-left-color: var(--red); }
 .hero-stat--orange { border-left-color: var(--orange); }
@@ -154,21 +165,22 @@ body {
 }
 .hero-stat--red    .hero-stat-pct { color: var(--red); }
 .hero-stat--orange .hero-stat-pct { color: var(--orange); }
-.hero-stat-label { font-size: 0.92rem; color: var(--text-dark); line-height: 1.4; }
+.hero-stat-label { font-size: 0.92rem; color: var(--forest); line-height: 1.4; }
 
 .hero-top-concerns {
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
   padding: 1.25rem 1.5rem;
   margin-bottom: 1rem;
+  box-shadow: var(--shadow-sm);
 }
 .hero-concerns-title {
   font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--text-light);
+  color: var(--forest-mid);
   margin-bottom: 0.75rem;
 }
 .hero-concerns-list {
@@ -189,13 +201,13 @@ body {
 .hero-concerns-list li::before {
   content: counter(concern-counter) '.';
   font-weight: 700;
-  color: var(--text-light);
+  color: var(--forest-mid);
   min-width: 1.2rem;
   flex-shrink: 0;
 }
-.concern-name { color: var(--text-dark); flex: 1; }
-.concern-pct  { color: var(--text-light); white-space: nowrap; font-size: 0.8rem; }
-.hero-footnote { font-size: 0.78rem; color: var(--text-light); font-style: italic; }
+.concern-name { color: var(--forest); flex: 1; }
+.concern-pct  { color: var(--forest-mid); white-space: nowrap; font-size: 0.8rem; }
+.hero-footnote { font-size: 0.78rem; color: var(--forest-light); font-style: italic; }
 
 /* ── County Map ──────────────────────────────────────────── */
 .county-map-wrap {
@@ -207,13 +219,13 @@ body {
   max-width: 800px;
   height: auto;
   display: block;
-  background: #f8fff8;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background: var(--forest-pale);
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
 }
 .map-tooltip {
   position: fixed;
-  background: rgba(0,0,0,0.82);
+  background: rgba(45,90,61,0.92);
   color: #fff;
   font-size: 0.8rem;
   padding: 0.3rem 0.6rem;
@@ -228,7 +240,7 @@ body {
   gap: 1rem;
   margin-top: 0.5rem;
   font-size: 0.78rem;
-  color: var(--text-light);
+  color: var(--forest-mid);
 }
 .legend-swatch {
   display: inline-block;
@@ -242,8 +254,8 @@ body {
 .county-table-wrap {
   max-height: 300px;
   overflow-y: auto;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  border: 1px solid var(--sand);
+  border-radius: var(--radius-sm);
 }
 .county-table {
   width: 100%;
@@ -253,24 +265,24 @@ body {
 .county-table th {
   position: sticky;
   top: 0;
-  background: var(--green-light);
+  background: var(--forest-pale);
   padding: 0.6rem 1rem;
   text-align: left;
   font-weight: 600;
-  color: var(--green-dark);
-  border-bottom: 1px solid var(--border);
+  color: var(--forest);
+  border-bottom: 1px solid var(--sand);
 }
 .county-table th.sortable {
   cursor: pointer;
   user-select: none;
 }
-.county-table th.sortable:hover { background: #c8e6c9; }
+.county-table th.sortable:hover { background: #d5e8db; }
 .county-table td {
   padding: 0.5rem 1rem;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid var(--warm);
 }
 .county-table tr:last-child td { border-bottom: none; }
-.county-table tr:hover td { background: #fafafa; }
+.county-table tr:hover td { background: var(--forest-pale); }
 
 /* ── Sentiment bar ───────────────────────────────────────── */
 .sentiment-wrap { }
@@ -279,7 +291,7 @@ body {
   height: 40px;
   border-radius: 6px;
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 1px solid var(--sand);
   margin-bottom: 1rem;
 }
 .sentiment-segment {
@@ -304,12 +316,12 @@ body {
   height: 14px;
   border-radius: 3px;
 }
-.legend-label { color: var(--text-dark); font-weight: 500; }
-.legend-pct   { color: var(--text-mid); }
-.legend-count { color: var(--text-light); font-size: 0.78rem; }
+.legend-label { color: var(--forest); font-weight: 500; }
+.legend-pct   { color: var(--forest-mid); }
+.legend-count { color: var(--forest-light); font-size: 0.78rem; }
 .sentiment-note {
   font-size: 0.78rem;
-  color: var(--text-light);
+  color: var(--forest-light);
   font-style: italic;
 }
 
@@ -322,9 +334,10 @@ body {
   margin-bottom: 1.75rem;
   padding: 1.25rem 1.5rem;
   background: var(--white);
-  border: 1px solid var(--border);
+  border: 1px solid var(--sand);
   border-left: 4px solid var(--red);
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
 }
 .topline-pct {
   font-family: var(--font-display);
@@ -336,13 +349,13 @@ body {
 .topline-label {
   font-size: 1rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: var(--forest);
   max-width: 340px;
 }
 .topline-sub {
   width: 100%;
   font-size: 0.78rem;
-  color: var(--text-light);
+  color: var(--forest-light);
 }
 
 /* ── Horizontal bar charts ───────────────────────────────── */
@@ -350,7 +363,7 @@ body {
 .hbar-list-title {
   font-size: 1rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--forest);
   margin-bottom: 1rem;
 }
 .hbar-row {
@@ -368,12 +381,12 @@ body {
 }
 .hbar-label {
   font-size: 0.84rem;
-  color: var(--text-dark);
+  color: var(--forest);
   line-height: 1.35;
 }
 .hbar-track {
   height: 20px;
-  background: #eeeeee;
+  background: var(--warm);
   border-radius: 4px;
   overflow: hidden;
 }
@@ -383,17 +396,17 @@ body {
   transition: width 0.4s ease;
 }
 .hbar-fill--concern { background: var(--red); }
-.hbar-fill--policy  { background: var(--green-mid); }
+.hbar-fill--policy  { background: var(--forest-mid); }
 .hbar-stat {
   font-size: 0.82rem;
-  color: var(--text-mid);
+  color: var(--forest-mid);
   white-space: nowrap;
 }
 .hbar-count { font-weight: 600; margin-right: 0.25rem; }
-.hbar-pct   { color: var(--text-light); }
+.hbar-pct   { color: var(--forest-light); }
 .hbar-note {
   font-size: 0.75rem;
-  color: var(--text-light);
+  color: var(--forest-light);
   font-style: italic;
   margin-top: 0.75rem;
 }
@@ -402,14 +415,14 @@ body {
 .loading-state, .error-state, .empty-state {
   padding: 2rem;
   text-align: center;
-  color: var(--text-light);
+  color: var(--forest-light);
   font-size: 0.9rem;
 }
 .error-state { color: var(--red); }
 
 /* ── Footer ──────────────────────────────────────────────── */
 .site-footer {
-  background: var(--green-dark);
+  background: var(--forest);
   color: rgba(255,255,255,0.75);
   padding: 1.5rem;
   text-align: center;

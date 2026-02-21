@@ -46,7 +46,7 @@ const VIVID_WORDS = [
 const EXCLUDE_QUOTES = [
   'I sometimes find out my child has been onscreen a lot',
   'These devices are not issued by school but they are required',
-  "My son's friend has his chrome book out at lunch",
+  'chrome book out at lunch',
 ];
 
 const MAX_QUOTE_LEN = 360;

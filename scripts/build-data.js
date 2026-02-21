@@ -231,7 +231,7 @@ async function main() {
       const truncated = truncateQuote(detail);
       if (EXCLUDE_QUOTES.some(ex => truncated.includes(ex))) continue;
       const score = scoreQuote(truncated);
-      if (score > 0) quotePool.push({ text: truncated, score });
+      if (score > 0) quotePool.push({ text: truncated, county: getCell(row, 'county') || null, score });
     }
 
     let district = getCell(row, 'district');
@@ -245,7 +245,7 @@ async function main() {
   }
 
   quotePool.sort((a, b) => b.score - a.score);
-  const featuredQuotes = quotePool.slice(0, 8).map(q => q.text);
+  const featuredQuotes = quotePool.slice(0, 8).map(({ text, county }) => ({ text, county }));
   console.log(`Quote pool: ${quotePool.length} scored, using top ${featuredQuotes.length}`);
 
   const commsTotal = Object.values(global.commsRating).reduce((a, b) => a + b, 0);

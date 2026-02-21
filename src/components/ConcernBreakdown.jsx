@@ -50,7 +50,7 @@ export default function ConcernBreakdown({ concernsTopLine, concernsBreakdown, t
             />
           ))}
           <p className="hbar-note">
-            % of total survey respondents. Parents could select multiple concerns.
+            % of total survey respondents. Respondents could select multiple concerns.
           </p>
         </div>
       ) : (

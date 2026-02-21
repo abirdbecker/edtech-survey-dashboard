@@ -36,7 +36,7 @@ export default function PolicyBreakdown({ policies, totalResponses }) {
         />
       ))}
       <p className="hbar-note">
-        % of total survey respondents. Parents could select multiple policies.
+        % of total survey respondents. Respondents could select multiple policies.
       </p>
     </div>
   );

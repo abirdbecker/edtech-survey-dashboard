@@ -1,11 +1,11 @@
 {
-  "generated": "2026-02-21T04:17:36.593Z",
-  "totalResponses": 218,
+  "generated": "2026-02-21T04:19:58.106Z",
+  "totalResponses": 219,
   "byCounty": {
     "Montgomery": 74,
     "Delaware": 42,
     "Allegheny": 40,
-    "Bucks": 33,
+    "Bucks": 34,
     "Chester": 16,
     "Philadelphia": 5,
     "Lancaster": 2,
@@ -17,7 +17,7 @@
   "anyTooMuch": 174,
   "screenTimeSentiment": {
     "Too much": 256,
-    "Just right": 63,
+    "Just right": 64,
     "Not enough": 0,
     "No opinion": 21,
     "I don't know": 8
@@ -25,7 +25,7 @@
   "byGradeBand": {
     "K-2": {
       "Too much": 100,
-      "Just right": 25,
+      "Just right": 26,
       "Not enough": 0,
       "No opinion": 8,
       "I don't know": 4
@@ -54,14 +54,14 @@
   },
   "commsRating": {
     "Very poorly": 50,
-    "Poorly": 78,
+    "Poorly": 79,
     "Neutral": 54,
     "Well": 25,
     "Very well": 11
   },
   "concernsTopLine": {
     "Yes": 177,
-    "No": 41
+    "No": 42
   },
   "concernsBreakdown": {
     "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 165,
@@ -73,15 +73,15 @@
     "Data privacy and security": 68
   },
   "policies": {
-    "Prohibit recreational screen use during the school day": 196,
-    "Paper-and-pencil homework only for elementary school": 172,
-    "Invest in teacher training and resources for non-digital instruction": 172,
-    "Parental access to student device activity": 167,
+    "Prohibit recreational screen use during the school day": 197,
+    "Paper-and-pencil homework only for elementary school": 173,
+    "Invest in teacher training and resources for non-digital instruction": 173,
+    "Parental access to student device activity": 168,
+    "Require explicit opt-in for generative AI tools": 153,
     "Guarantee right to opt out of unproven EdTech and AI": 153,
-    "Require explicit opt-in for generative AI tools": 152,
-    "Keep school devices at school in elementary, limit take-home in middle school": 146,
-    "Parental consent for each data-collecting app or website": 139,
-    "Reconsider the 1:1 device model and return to shared devices in K-8": 111
+    "Keep school devices at school in elementary, limit take-home in middle school": 147,
+    "Parental consent for each data-collecting app or website": 140,
+    "Reconsider the 1:1 device model and return to shared devices in K-8": 112
   },
   "districts": [
     "Central Bucks",

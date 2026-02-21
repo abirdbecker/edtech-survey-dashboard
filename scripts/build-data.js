@@ -42,6 +42,12 @@ const VIVID_WORDS = [
   'never', 'always', 'every day', 'all day', 'cannot', "can't",
 ];
 
+// Substrings that uniquely identify quotes to exclude from display
+const EXCLUDE_QUOTES = [
+  'I sometimes find out my child has been onscreen a lot',
+  'These devices are not issued by school but they are required',
+];
+
 const MAX_QUOTE_LEN = 360;
 
 function truncateQuote(text) {
@@ -222,6 +228,7 @@ async function main() {
     const detail = getCell(row, 'concernDetails');
     if (detail) {
       const truncated = truncateQuote(detail);
+      if (EXCLUDE_QUOTES.some(ex => truncated.includes(ex))) continue;
       const score = scoreQuote(truncated);
       if (score > 0) quotePool.push({ text: truncated, score });
     }

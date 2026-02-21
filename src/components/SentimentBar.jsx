@@ -3,6 +3,7 @@ const COLORS = {
   'Just right': '#388e3c',
   'Not enough': '#f57c00',
   'No opinion': '#9e9e9e',
+  "I don't know": '#bdbdbd',
 };
 
 export default function SentimentBar({ screenTimeSentiment }) {

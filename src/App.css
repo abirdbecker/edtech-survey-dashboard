@@ -78,38 +78,124 @@ body {
   margin-bottom: 1.25rem;
 }
 
-/* ── Hero stat cards ─────────────────────────────────────── */
-.stat-cards {
+/* ── District filter ─────────────────────────────────────── */
+.filter-bar {
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+  gap: 0.75rem;
   flex-wrap: wrap;
-}
-.stat-card {
+  padding: 0.75rem 1rem;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1.5rem 2rem;
-  min-width: 180px;
-  flex: 1;
+  margin-bottom: 1.75rem;
 }
-.stat-value {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 800;
-  color: var(--green-mid);
-  line-height: 1;
-}
-.stat-label {
+.filter-label {
+  font-size: 0.85rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-top: 0.35rem;
+  color: var(--text-mid);
+  white-space: nowrap;
+}
+.filter-select {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  padding: 0.35rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
   color: var(--text-dark);
+  cursor: pointer;
+  flex: 1;
+  min-width: 220px;
+  max-width: 400px;
 }
-.stat-subtitle {
+.filter-select:focus { outline: 2px solid var(--green-mid); }
+.filter-clear {
   font-size: 0.8rem;
-  color: var(--text-light);
-  margin-top: 0.2rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  color: var(--text-mid);
+  cursor: pointer;
+  white-space: nowrap;
 }
+.filter-clear:hover { background: #fafafa; color: var(--red); border-color: var(--red); }
+
+/* ── Hero section ────────────────────────────────────────── */
+.district-context {
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  margin-bottom: 1.25rem;
+}
+.hero-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+.hero-stat {
+  flex: 1;
+  min-width: 200px;
+  padding: 1.25rem 1.5rem;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+.hero-stat--red    { border-left-color: var(--red); }
+.hero-stat--orange { border-left-color: var(--orange); }
+.hero-stat-pct {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+.hero-stat--red    .hero-stat-pct { color: var(--red); }
+.hero-stat--orange .hero-stat-pct { color: var(--orange); }
+.hero-stat-label { font-size: 0.92rem; color: var(--text-dark); line-height: 1.4; }
+
+.hero-top-concerns {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+.hero-concerns-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-light);
+  margin-bottom: 0.75rem;
+}
+.hero-concerns-list {
+  list-style: none;
+  counter-reset: concern-counter;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.hero-concerns-list li {
+  counter-increment: concern-counter;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.88rem;
+}
+.hero-concerns-list li::before {
+  content: counter(concern-counter) '.';
+  font-weight: 700;
+  color: var(--text-light);
+  min-width: 1.2rem;
+  flex-shrink: 0;
+}
+.concern-name { color: var(--text-dark); flex: 1; }
+.concern-pct  { color: var(--text-light); white-space: nowrap; font-size: 0.8rem; }
+.hero-footnote { font-size: 0.78rem; color: var(--text-light); font-style: italic; }
 
 /* ── County Map ──────────────────────────────────────────── */
 .county-map-wrap {
@@ -144,12 +230,12 @@ body {
   font-size: 0.78rem;
   color: var(--text-light);
 }
-.legend-dot {
+.legend-swatch {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 0.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  vertical-align: middle;
 }
 
 /* ── County Table ────────────────────────────────────────── */

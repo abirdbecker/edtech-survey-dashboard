@@ -16,10 +16,8 @@ import { fileURLToPath } from 'url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
 
-// --- Load config ---
 const fieldMap = JSON.parse(readFileSync(join(ROOT, 'data/field-map.json'), 'utf-8'));
 
-// --- Auth ---
 const keyB64 = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
 const sheetId = process.env.GOOGLE_SHEET_ID;
 
@@ -29,15 +27,12 @@ if (!keyB64 || !sheetId) {
 }
 
 const keyJson = JSON.parse(Buffer.from(keyB64, 'base64').toString('utf-8'));
-
 const auth = new google.auth.GoogleAuth({
   credentials: keyJson,
   scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
 });
-
 const sheets = google.sheets({ version: 'v4', auth });
 
-// --- Helpers ---
 function increment(obj, key) {
   if (!key) return;
   const k = key.trim();
@@ -45,121 +40,123 @@ function increment(obj, key) {
   obj[k] = (obj[k] || 0) + 1;
 }
 
-function parseMultiSelect(raw) {
-  if (!raw) return [];
-  return raw.split(',').map(v => v.trim()).filter(Boolean);
-}
-
-/** Match raw cell value against a list of known option strings.
- *  Handles options that themselves contain commas by doing substring
- *  matching rather than naive comma-splitting. */
 function parseKnownOptions(raw, knownOptions) {
   if (!raw) return [];
   return knownOptions.filter(opt => raw.includes(opt));
 }
 
-// --- Main ---
+function emptyBucket() {
+  return {
+    totalResponses: 0,
+    byCounty: {},
+    screenTimeSentiment: { 'Too much': 0, 'Just right': 0, 'Not enough': 0, 'No opinion': 0, "I don't know": 0 },
+    concernsTopLine: { Yes: 0, No: 0 },
+    concernsBreakdown: {},
+    policies: {},
+  };
+}
+
+function aggregateRow(bucket, row, getCell) {
+  bucket.totalResponses++;
+
+  const county = getCell(row, 'county');
+  if (county) increment(bucket.byCounty, county);
+
+  for (const field of fieldMap.sentimentFields) {
+    const val = getCell(row, field);
+    if (val && val in bucket.screenTimeSentiment) {
+      bucket.screenTimeSentiment[val]++;
+    }
+  }
+
+  const hasConcerns = getCell(row, 'hasConcerns');
+  if (hasConcerns === 'Yes') {
+    bucket.concernsTopLine.Yes++;
+    const concernList = parseKnownOptions(getCell(row, 'concerns'), fieldMap.concernOptions);
+    for (const concern of concernList) {
+      if (concern !== 'Other') increment(bucket.concernsBreakdown, concern);
+    }
+  } else if (hasConcerns === 'No') {
+    bucket.concernsTopLine.No++;
+  }
+
+  const policyList = parseKnownOptions(getCell(row, 'policies'), fieldMap.policyOptions);
+  for (const policy of policyList) {
+    if (policy !== 'Other') increment(bucket.policies, policy);
+  }
+}
+
+function sortBucket(b) {
+  return {
+    totalResponses: b.totalResponses,
+    byCounty: sortDesc(b.byCounty),
+    screenTimeSentiment: b.screenTimeSentiment,
+    concernsTopLine: b.concernsTopLine,
+    concernsBreakdown: sortDesc(b.concernsBreakdown),
+    policies: sortDesc(b.policies),
+  };
+}
+
+function sortDesc(obj) {
+  return Object.fromEntries(Object.entries(obj).sort(([, a], [, b]) => b - a));
+}
+
 async function main() {
   console.log('Fetching sheet data...');
 
   const response = await sheets.spreadsheets.values.get({
     spreadsheetId: sheetId,
-    range: 'A:AZ', // grab all columns
+    range: 'A:AZ',
   });
 
   const rows = response.data.values;
   if (!rows || rows.length < 2) {
     console.log('No data found in sheet.');
-    writeOutput({ totalResponses: 0 });
+    writeOutput({ ...emptyBucket(), byDistrict: {}, districts: [] });
     return;
   }
 
-  // First row is headers
   const headers = rows[0];
   const dataRows = rows.slice(1);
-
   console.log(`Found ${dataRows.length} response rows`);
   console.log('Sheet headers:', headers.join(', '));
 
-  // Build column index map
   const colIndex = {};
   headers.forEach((h, i) => { colIndex[h] = i; });
 
-  // Helper to get a cell value by column header name
   function getCell(row, colName) {
     const idx = colIndex[colName];
     return idx !== undefined ? (row[idx] || '').trim() : '';
   }
 
-  // --- Aggregation buckets ---
-  const byCounty = {};
-  const screenTimeSentiment = { 'Too much': 0, 'Just right': 0, 'Not enough': 0, 'No opinion': 0 };
-  const concernsTopLine = { Yes: 0, No: 0 };
-  const concernsBreakdown = {};
-  const policies = {};
-
-  let totalResponses = 0;
+  const global = emptyBucket();
+  const byDistrict = {};
 
   for (const row of dataRows) {
-    // Skip empty rows
     if (!row || row.every(c => !c)) continue;
-    totalResponses++;
 
-    // County (public school only — Q2)
-    const county = getCell(row, 'county');
-    if (county) increment(byCounty, county);
+    aggregateRow(global, row, getCell);
 
-    // Screen time sentiment — aggregate across all grade bands
-    for (const field of fieldMap.sentimentFields) {
-      const val = getCell(row, field);
-      if (val && val in screenTimeSentiment) {
-        screenTimeSentiment[val]++;
-      }
+    let district = getCell(row, 'district');
+    if (!district || district.toLowerCase().includes('other')) {
+      district = getCell(row, 'districtOther');
     }
-
-    // Concerns top-line (Q9)
-    const hasConcerns = getCell(row, 'hasConcerns');
-    if (hasConcerns === 'Yes') {
-      concernsTopLine.Yes++;
-      // Concerns breakdown (Q9b) — match against known options to handle commas in option text
-      const concernList = parseKnownOptions(getCell(row, 'concerns'), fieldMap.concernOptions);
-      for (const concern of concernList) {
-        if (concern !== 'Other') {
-          increment(concernsBreakdown, concern);
-        }
-      }
-    } else if (hasConcerns === 'No') {
-      concernsTopLine.No++;
-    }
-
-    // Policy preferences (Q11) — match against known options to handle commas in option text
-    const policyList = parseKnownOptions(getCell(row, 'policies'), fieldMap.policyOptions);
-    for (const policy of policyList) {
-      if (policy !== 'Other') {
-        increment(policies, policy);
-      }
+    if (district) {
+      if (!byDistrict[district]) byDistrict[district] = emptyBucket();
+      aggregateRow(byDistrict[district], row, getCell);
     }
   }
 
-  // Sort concern and policy objects by count descending
-  const sortedConcerns = Object.fromEntries(
-    Object.entries(concernsBreakdown).sort(([, a], [, b]) => b - a)
-  );
-  const sortedPolicies = Object.fromEntries(
-    Object.entries(policies).sort(([, a], [, b]) => b - a)
-  );
-  const sortedCounties = Object.fromEntries(
-    Object.entries(byCounty).sort(([, a], [, b]) => b - a)
-  );
+  const districts = Object.entries(byDistrict)
+    .sort(([, a], [, b]) => b.totalResponses - a.totalResponses)
+    .map(([name]) => name);
 
-  writeOutput({
-    totalResponses,
-    byCounty: sortedCounties,
-    screenTimeSentiment,
-    concernsTopLine,
-    concernsBreakdown: sortedConcerns,
-    policies: sortedPolicies,
-  });
+  const sortedByDistrict = {};
+  for (const name of districts) {
+    sortedByDistrict[name] = sortBucket(byDistrict[name]);
+  }
+
+  writeOutput({ ...sortBucket(global), byDistrict: sortedByDistrict, districts });
 }
 
 function writeOutput(data) {
@@ -171,12 +168,15 @@ function writeOutput(data) {
     concernsTopLine: data.concernsTopLine || {},
     concernsBreakdown: data.concernsBreakdown || {},
     policies: data.policies || {},
+    districts: data.districts || [],
+    byDistrict: data.byDistrict || {},
   };
 
   const outPath = join(ROOT, 'public/data/dashboard.json');
   writeFileSync(outPath, JSON.stringify(output, null, 2));
   console.log(`Written to ${outPath}`);
   console.log(`Total responses: ${output.totalResponses}`);
+  console.log(`Districts: ${output.districts.length} (${output.districts.slice(0, 5).join(', ')}...)`);
 }
 
 main().catch(err => {

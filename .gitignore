@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.vercel/
+.member-cache.json
+*.local

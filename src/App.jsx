@@ -68,7 +68,7 @@ export default function App() {
                   return (
                     <div className="hero-stat" style={statStyle(tooMuchPct)}>
                       <div className="hero-stat-pct">{tooMuchPct}%</div>
-                      <div className="hero-stat-label">say there's <strong>too much</strong> screen time at school<sup>1</sup></div>
+                      <div className="hero-stat-label">say there's <strong>too much</strong> screen time at school*</div>
                     </div>
                   );
                 })()}
@@ -115,7 +115,7 @@ export default function App() {
                 {!selectedDistrict && data.districts?.length > 0 && ` from ${data.districts.length} school districts`}
               </p>
               <p className="hero-footnote">
-                <sup>1</sup> Represents % of parents who rated at least one grade band as "Too much." Concerns and communication % are per respondent.
+                * Represents % of parents who rated at least one grade band as "Too much." Concerns and communication % are per respondent.
               </p>
             </section>
 

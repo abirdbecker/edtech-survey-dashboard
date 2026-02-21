@@ -42,12 +42,25 @@ const VIVID_WORDS = [
   'never', 'always', 'every day', 'all day', 'cannot', "can't",
 ];
 
+const MAX_QUOTE_LEN = 360;
+
+function truncateQuote(text) {
+  const t = text.trim();
+  if (t.length <= MAX_QUOTE_LEN) return t;
+  const sub = t.slice(0, MAX_QUOTE_LEN);
+  const lastEnd = Math.max(sub.lastIndexOf('. '), sub.lastIndexOf('! '), sub.lastIndexOf('? '));
+  if (lastEnd > MAX_QUOTE_LEN * 0.35) return t.slice(0, lastEnd + 1).trim();
+  return sub.slice(0, sub.lastIndexOf(' ')).trim() + '\u2026';
+}
+
 function scoreQuote(text) {
   const trimmed = text.trim();
   const len = trimmed.length;
   if (len < 70) return 0;
   const lower = trimmed.toLowerCase();
-  let score = Math.min(len / 400, 1) * 40;
+  // Peak score around 200-300 chars; penalise very long responses
+  const lenScore = Math.min(len, 300) / 300 * 35 - Math.max(0, (len - 350) / 150) * 8;
+  let score = lenScore;
   for (const word of VIVID_WORDS) {
     if (lower.includes(word)) score += 6;
   }
@@ -205,7 +218,7 @@ async function main() {
     const detail = getCell(row, 'concernDetails');
     if (detail) {
       const score = scoreQuote(detail);
-      if (score > 0) quotePool.push({ text: detail.trim(), score });
+      if (score > 0) quotePool.push({ text: truncateQuote(detail), score });
     }
 
     let district = getCell(row, 'district');

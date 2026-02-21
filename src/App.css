@@ -489,7 +489,6 @@ body {
 }
 .quote-text {
   font-size: 0.88rem;
-  font-style: italic;
   color: var(--forest);
   line-height: 1.55;
 }

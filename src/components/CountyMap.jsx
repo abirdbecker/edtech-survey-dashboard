@@ -59,11 +59,6 @@ export default function CountyMap({ byCounty }) {
         </div>
       )}
 
-      <div className="map-legend">
-        <span className="legend-swatch" style={{ background: '#e8f5e9', border: '1px solid #bdbdbd' }} /> 0 responses
-        <span className="legend-swatch" style={{ background: '#81c784', border: '1px solid #388e3c', marginLeft: '1rem' }} /> Low
-        <span className="legend-swatch" style={{ background: '#1b5e20', border: '1px solid #1b5e20', marginLeft: '0.75rem' }} /> High
-      </div>
     </div>
   );
 }

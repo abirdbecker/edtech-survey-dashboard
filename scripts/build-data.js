@@ -217,8 +217,9 @@ async function main() {
 
     const detail = getCell(row, 'concernDetails');
     if (detail) {
-      const score = scoreQuote(detail);
-      if (score > 0) quotePool.push({ text: truncateQuote(detail), score });
+      const truncated = truncateQuote(detail);
+      const score = scoreQuote(truncated);
+      if (score > 0) quotePool.push({ text: truncated, score });
     }
 
     let district = getCell(row, 'district');

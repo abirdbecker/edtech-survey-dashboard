@@ -1,13 +1,13 @@
 {
-  "generated": "2026-02-21T00:36:00.005Z",
-  "totalResponses": 199,
+  "generated": "2026-02-21T03:18:42.571Z",
+  "totalResponses": 215,
   "byCounty": {
-    "Montgomery": 67,
+    "Montgomery": 74,
+    "Delaware": 41,
     "Allegheny": 40,
-    "Delaware": 37,
-    "Bucks": 29,
-    "Chester": 14,
-    "Philadelphia": 4,
+    "Bucks": 32,
+    "Chester": 15,
+    "Philadelphia": 5,
     "Lancaster": 2,
     "Butler": 2,
     "Lehigh": 2,
@@ -15,35 +15,72 @@
     "Lawrence": 1
   },
   "screenTimeSentiment": {
-    "Too much": 233,
-    "Just right": 57,
+    "Too much": 255,
+    "Just right": 61,
     "Not enough": 0,
     "No opinion": 21,
-    "I don't know": 1
+    "I don't know": 5
+  },
+  "byGradeBand": {
+    "K-2": {
+      "Too much": 99,
+      "Just right": 24,
+      "Not enough": 0,
+      "No opinion": 8,
+      "I don't know": 4
+    },
+    "3-5": {
+      "Too much": 84,
+      "Just right": 22,
+      "Not enough": 0,
+      "No opinion": 5,
+      "I don't know": 1
+    },
+    "6-8": {
+      "Too much": 48,
+      "Just right": 11,
+      "Not enough": 0,
+      "No opinion": 5,
+      "I don't know": 0
+    },
+    "9-12": {
+      "Too much": 24,
+      "Just right": 4,
+      "Not enough": 0,
+      "No opinion": 3,
+      "I don't know": 0
+    }
+  },
+  "commsRating": {
+    "Very poorly": 50,
+    "Poorly": 77,
+    "Neutral": 53,
+    "Well": 24,
+    "Very well": 11
   },
   "concernsTopLine": {
-    "Yes": 161,
-    "No": 38
+    "Yes": 175,
+    "No": 40
   },
   "concernsBreakdown": {
-    "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 151,
-    "Impact on attention span and focus": 141,
-    "Impact on social skills and peer interaction": 128,
-    "Exposure to inappropriate content despite school filters": 108,
-    "Eye strain or physical health effects": 94,
-    "School devices undermining family screen time rules at home": 92,
-    "Data privacy and security": 62
+    "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 163,
+    "Impact on attention span and focus": 153,
+    "Impact on social skills and peer interaction": 135,
+    "Exposure to inappropriate content despite school filters": 118,
+    "School devices undermining family screen time rules at home": 101,
+    "Eye strain or physical health effects": 100,
+    "Data privacy and security": 67
   },
   "policies": {
-    "Prohibit recreational screen use during the school day": 178,
-    "Paper-and-pencil homework only for elementary school": 158,
-    "Invest in teacher training and resources for non-digital instruction": 155,
-    "Parental access to student device activity": 151,
-    "Guarantee right to opt out of unproven EdTech and AI": 141,
-    "Require explicit opt-in for generative AI tools": 140,
-    "Keep school devices at school in elementary, limit take-home in middle school": 135,
-    "Parental consent for each data-collecting app or website": 129,
-    "Reconsider the 1:1 device model and return to shared devices in K-8": 101
+    "Prohibit recreational screen use during the school day": 193,
+    "Paper-and-pencil homework only for elementary school": 170,
+    "Invest in teacher training and resources for non-digital instruction": 169,
+    "Parental access to student device activity": 164,
+    "Require explicit opt-in for generative AI tools": 151,
+    "Guarantee right to opt out of unproven EdTech and AI": 151,
+    "Keep school devices at school in elementary, limit take-home in middle school": 144,
+    "Parental consent for each data-collecting app or website": 136,
+    "Reconsider the 1:1 device model and return to shared devices in K-8": 111
   },
   "districts": [
     "Central Bucks",
@@ -63,6 +100,7 @@
     "Tredyffrin-Easttown",
     "Downingtown Area",
     "Plymouth-Whitemarsh",
+    "Unionville-Chadds Ford",
     "Palisades",
     "Spring-Ford Area",
     "Palmyra Area",
@@ -76,7 +114,6 @@
     "North Allegheny",
     "Union Area",
     "Seneca Valley",
-    "Unionville-Chadds Ford",
     "Hempfield",
     "Upper Merion Area",
     "Cheltenham Township",
@@ -88,151 +125,299 @@
   ],
   "byDistrict": {
     "Central Bucks": {
-      "totalResponses": 23,
+      "totalResponses": 26,
       "byCounty": {
-        "Bucks": 23
+        "Bucks": 26
       },
       "screenTimeSentiment": {
-        "Too much": 34,
+        "Too much": 39,
         "Just right": 6,
         "Not enough": 0,
         "No opinion": 6,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 13,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 13,
+          "Just right": 3,
+          "Not enough": 0,
+          "No opinion": 2,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 8,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 2,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 5,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 2,
+        "Poorly": 10,
+        "Neutral": 9,
+        "Well": 4,
+        "Very well": 1
+      },
       "concernsTopLine": {
-        "Yes": 19,
+        "Yes": 22,
         "No": 4
       },
       "concernsBreakdown": {
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 18,
-        "Impact on attention span and focus": 16,
-        "Impact on social skills and peer interaction": 16,
-        "Eye strain or physical health effects": 15,
-        "Exposure to inappropriate content despite school filters": 12,
-        "School devices undermining family screen time rules at home": 12,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 20,
+        "Impact on attention span and focus": 19,
+        "Impact on social skills and peer interaction": 18,
+        "Eye strain or physical health effects": 16,
+        "Exposure to inappropriate content despite school filters": 15,
+        "School devices undermining family screen time rules at home": 14,
         "Data privacy and security": 4
       },
       "policies": {
-        "Keep school devices at school in elementary, limit take-home in middle school": 20,
-        "Paper-and-pencil homework only for elementary school": 20,
-        "Prohibit recreational screen use during the school day": 19,
-        "Invest in teacher training and resources for non-digital instruction": 19,
-        "Parental consent for each data-collecting app or website": 18,
-        "Guarantee right to opt out of unproven EdTech and AI": 16,
-        "Parental access to student device activity": 15,
-        "Require explicit opt-in for generative AI tools": 14,
-        "Reconsider the 1:1 device model and return to shared devices in K-8": 8
+        "Paper-and-pencil homework only for elementary school": 23,
+        "Keep school devices at school in elementary, limit take-home in middle school": 22,
+        "Prohibit recreational screen use during the school day": 22,
+        "Invest in teacher training and resources for non-digital instruction": 21,
+        "Parental consent for each data-collecting app or website": 20,
+        "Guarantee right to opt out of unproven EdTech and AI": 18,
+        "Parental access to student device activity": 18,
+        "Require explicit opt-in for generative AI tools": 16,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 9
       }
     },
     "Colonial": {
-      "totalResponses": 18,
+      "totalResponses": 23,
       "byCounty": {
-        "Montgomery": 18
+        "Montgomery": 23
       },
       "screenTimeSentiment": {
-        "Too much": 19,
-        "Just right": 4,
+        "Too much": 25,
+        "Just right": 7,
         "Not enough": 0,
         "No opinion": 4,
-        "I don't know": 1
+        "I don't know": 4
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 13,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 2,
+          "I don't know": 3
+        },
+        "3-5": {
+          "Too much": 8,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 1
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 2,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 5,
+        "Poorly": 10,
+        "Neutral": 6,
+        "Well": 1,
+        "Very well": 1
       },
       "concernsTopLine": {
-        "Yes": 11,
-        "No": 7
+        "Yes": 15,
+        "No": 8
       },
       "concernsBreakdown": {
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 10,
-        "Impact on attention span and focus": 8,
-        "Impact on social skills and peer interaction": 8,
-        "Exposure to inappropriate content despite school filters": 8,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 14,
+        "Impact on attention span and focus": 10,
+        "Exposure to inappropriate content despite school filters": 10,
+        "Impact on social skills and peer interaction": 9,
+        "School devices undermining family screen time rules at home": 6,
         "Eye strain or physical health effects": 4,
-        "School devices undermining family screen time rules at home": 4,
-        "Data privacy and security": 2
+        "Data privacy and security": 3
       },
       "policies": {
-        "Prohibit recreational screen use during the school day": 17,
-        "Paper-and-pencil homework only for elementary school": 13,
-        "Keep school devices at school in elementary, limit take-home in middle school": 13,
-        "Parental access to student device activity": 11,
-        "Invest in teacher training and resources for non-digital instruction": 11,
-        "Reconsider the 1:1 device model and return to shared devices in K-8": 9,
-        "Require explicit opt-in for generative AI tools": 9,
-        "Guarantee right to opt out of unproven EdTech and AI": 8,
+        "Prohibit recreational screen use during the school day": 21,
+        "Invest in teacher training and resources for non-digital instruction": 15,
+        "Keep school devices at school in elementary, limit take-home in middle school": 15,
+        "Paper-and-pencil homework only for elementary school": 14,
+        "Parental access to student device activity": 14,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 11,
+        "Require explicit opt-in for generative AI tools": 11,
+        "Guarantee right to opt out of unproven EdTech and AI": 9,
         "Parental consent for each data-collecting app or website": 8
       }
     },
     "Wallingford-Swarthmore": {
-      "totalResponses": 17,
+      "totalResponses": 20,
       "byCounty": {
-        "Delaware": 17
+        "Delaware": 20
       },
       "screenTimeSentiment": {
-        "Too much": 25,
+        "Too much": 27,
         "Just right": 4,
         "Not enough": 0,
         "No opinion": 1,
-        "I don't know": 0
+        "I don't know": 1
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 10,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 1
+        },
+        "3-5": {
+          "Too much": 10,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 7,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 6,
+        "Poorly": 9,
+        "Neutral": 2,
+        "Well": 3,
+        "Very well": 0
       },
       "concernsTopLine": {
-        "Yes": 15,
+        "Yes": 18,
         "No": 2
       },
       "concernsBreakdown": {
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 14,
-        "Impact on attention span and focus": 12,
-        "Impact on social skills and peer interaction": 11,
-        "Exposure to inappropriate content despite school filters": 9,
-        "Eye strain or physical health effects": 8,
-        "School devices undermining family screen time rules at home": 6,
-        "Data privacy and security": 3
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 17,
+        "Impact on attention span and focus": 15,
+        "Impact on social skills and peer interaction": 12,
+        "Exposure to inappropriate content despite school filters": 11,
+        "Eye strain or physical health effects": 10,
+        "School devices undermining family screen time rules at home": 8,
+        "Data privacy and security": 5
       },
       "policies": {
-        "Prohibit recreational screen use during the school day": 17,
-        "Paper-and-pencil homework only for elementary school": 15,
-        "Invest in teacher training and resources for non-digital instruction": 15,
-        "Reconsider the 1:1 device model and return to shared devices in K-8": 13,
-        "Require explicit opt-in for generative AI tools": 13,
-        "Parental access to student device activity": 13,
-        "Keep school devices at school in elementary, limit take-home in middle school": 12,
-        "Parental consent for each data-collecting app or website": 11,
-        "Guarantee right to opt out of unproven EdTech and AI": 10
+        "Prohibit recreational screen use during the school day": 20,
+        "Paper-and-pencil homework only for elementary school": 18,
+        "Invest in teacher training and resources for non-digital instruction": 18,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 16,
+        "Parental access to student device activity": 16,
+        "Keep school devices at school in elementary, limit take-home in middle school": 15,
+        "Require explicit opt-in for generative AI tools": 15,
+        "Guarantee right to opt out of unproven EdTech and AI": 12,
+        "Parental consent for each data-collecting app or website": 12
       }
     },
     "Lower Merion": {
-      "totalResponses": 15,
+      "totalResponses": 17,
       "byCounty": {
-        "Montgomery": 15
+        "Montgomery": 17
       },
       "screenTimeSentiment": {
-        "Too much": 18,
+        "Too much": 23,
         "Just right": 4,
         "Not enough": 0,
         "No opinion": 1,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 14,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 7,
+          "Just right": 3,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 7,
+        "Poorly": 5,
+        "Neutral": 5,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
-        "Yes": 15,
+        "Yes": 17,
         "No": 0
       },
       "concernsBreakdown": {
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 15,
-        "Impact on attention span and focus": 14,
-        "Impact on social skills and peer interaction": 14,
-        "Exposure to inappropriate content despite school filters": 11,
-        "Eye strain or physical health effects": 9,
-        "Data privacy and security": 9,
-        "School devices undermining family screen time rules at home": 9
+        "Impact on attention span and focus": 16,
+        "Impact on social skills and peer interaction": 16,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 16,
+        "Exposure to inappropriate content despite school filters": 13,
+        "Eye strain or physical health effects": 11,
+        "Data privacy and security": 11,
+        "School devices undermining family screen time rules at home": 11
       },
       "policies": {
-        "Require explicit opt-in for generative AI tools": 15,
-        "Parental access to student device activity": 15,
-        "Paper-and-pencil homework only for elementary school": 14,
-        "Prohibit recreational screen use during the school day": 14,
-        "Guarantee right to opt out of unproven EdTech and AI": 14,
-        "Parental consent for each data-collecting app or website": 14,
-        "Invest in teacher training and resources for non-digital instruction": 14,
-        "Keep school devices at school in elementary, limit take-home in middle school": 13,
-        "Reconsider the 1:1 device model and return to shared devices in K-8": 11
+        "Require explicit opt-in for generative AI tools": 17,
+        "Parental access to student device activity": 17,
+        "Paper-and-pencil homework only for elementary school": 16,
+        "Prohibit recreational screen use during the school day": 16,
+        "Guarantee right to opt out of unproven EdTech and AI": 16,
+        "Parental consent for each data-collecting app or website": 16,
+        "Invest in teacher training and resources for non-digital instruction": 16,
+        "Keep school devices at school in elementary, limit take-home in middle school": 14,
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 13
       }
     },
     "Upper St. Clair": {
@@ -246,6 +431,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 4,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 4,
+          "Just right": 4,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 3,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 3,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 6,
+        "Neutral": 5,
+        "Well": 2,
+        "Very well": 1
       },
       "concernsTopLine": {
         "Yes": 9,
@@ -284,6 +506,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 3,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 5,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 7,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 2,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 3,
+        "Poorly": 4,
+        "Neutral": 4,
+        "Well": 1,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 11,
         "No": 1
@@ -320,6 +579,43 @@
         "Not enough": 0,
         "No opinion": 3,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 3,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 3,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 5,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 3,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 4,
+        "Poorly": 4,
+        "Neutral": 3,
+        "Well": 1,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 10,
@@ -358,6 +654,43 @@
         "No opinion": 2,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 6,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 6,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 4,
+        "Poorly": 3,
+        "Neutral": 3,
+        "Well": 2,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 12,
         "No": 0
@@ -394,6 +727,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 5,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 3,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 5,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 6,
@@ -432,6 +802,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 3,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 3,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 5,
+        "Poorly": 1,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 7,
         "No": 0
@@ -469,6 +876,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 2,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 3,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 3,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 5,
         "No": 0
@@ -495,37 +939,74 @@
       }
     },
     "School District of Philadelphia": {
-      "totalResponses": 4,
+      "totalResponses": 5,
       "byCounty": {
-        "Philadelphia": 4
+        "Philadelphia": 5
       },
       "screenTimeSentiment": {
-        "Too much": 4,
+        "Too much": 6,
         "Just right": 2,
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 3,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 2,
+        "Neutral": 2,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
-        "Yes": 4,
+        "Yes": 5,
         "No": 0
       },
       "concernsBreakdown": {
-        "Impact on attention span and focus": 3,
-        "Eye strain or physical health effects": 2,
+        "Impact on attention span and focus": 4,
+        "Eye strain or physical health effects": 3,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 3,
         "Exposure to inappropriate content despite school filters": 2,
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 2,
         "Impact on social skills and peer interaction": 1,
         "School devices undermining family screen time rules at home": 1
       },
       "policies": {
+        "Prohibit recreational screen use during the school day": 4,
+        "Require explicit opt-in for generative AI tools": 4,
+        "Guarantee right to opt out of unproven EdTech and AI": 4,
         "Parental access to student device activity": 4,
+        "Invest in teacher training and resources for non-digital instruction": 4,
+        "Paper-and-pencil homework only for elementary school": 4,
         "Keep school devices at school in elementary, limit take-home in middle school": 3,
-        "Prohibit recreational screen use during the school day": 3,
-        "Require explicit opt-in for generative AI tools": 3,
-        "Guarantee right to opt out of unproven EdTech and AI": 3,
-        "Invest in teacher training and resources for non-digital instruction": 3,
-        "Paper-and-pencil homework only for elementary school": 3,
         "Reconsider the 1:1 device model and return to shared devices in K-8": 2,
         "Parental consent for each data-collecting app or website": 2
       }
@@ -541,6 +1022,43 @@
         "Not enough": 0,
         "No opinion": 2,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 2,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 1,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 3,
@@ -579,6 +1097,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 1,
+        "Very well": 1
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 2
@@ -615,6 +1170,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 2,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 2,
         "No": 0
@@ -647,6 +1239,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 2,
@@ -684,6 +1313,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 1,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 1
@@ -704,6 +1370,77 @@
         "Invest in teacher training and resources for non-digital instruction": 1
       }
     },
+    "Unionville-Chadds Ford": {
+      "totalResponses": 2,
+      "byCounty": {
+        "Chester": 2
+      },
+      "screenTimeSentiment": {
+        "Too much": 4,
+        "Just right": 0,
+        "Not enough": 0,
+        "No opinion": 0,
+        "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
+      "concernsTopLine": {
+        "Yes": 2,
+        "No": 0
+      },
+      "concernsBreakdown": {
+        "Impact on attention span and focus": 2,
+        "Impact on social skills and peer interaction": 2,
+        "Exposure to inappropriate content despite school filters": 2,
+        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 2,
+        "School devices undermining family screen time rules at home": 2
+      },
+      "policies": {
+        "Reconsider the 1:1 device model and return to shared devices in K-8": 2,
+        "Paper-and-pencil homework only for elementary school": 2,
+        "Prohibit recreational screen use during the school day": 2,
+        "Require explicit opt-in for generative AI tools": 2,
+        "Guarantee right to opt out of unproven EdTech and AI": 2,
+        "Parental consent for each data-collecting app or website": 2,
+        "Parental access to student device activity": 2,
+        "Invest in teacher training and resources for non-digital instruction": 2
+      }
+    },
     "Palisades": {
       "totalResponses": 2,
       "byCounty": {
@@ -715,6 +1452,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 2,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 1,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 2,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -749,6 +1523,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -781,6 +1592,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -810,6 +1658,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -843,6 +1728,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 1,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -881,6 +1803,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -910,6 +1869,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -946,6 +1942,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -978,6 +2011,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -1014,6 +2084,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -1052,6 +2159,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -1085,6 +2229,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 1
+      },
       "concernsTopLine": {
         "Yes": 0,
         "No": 1
@@ -1106,6 +2287,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -1130,40 +2348,6 @@
         "Invest in teacher training and resources for non-digital instruction": 1
       }
     },
-    "Unionville-Chadds Ford": {
-      "totalResponses": 1,
-      "byCounty": {
-        "Chester": 1
-      },
-      "screenTimeSentiment": {
-        "Too much": 2,
-        "Just right": 0,
-        "Not enough": 0,
-        "No opinion": 0,
-        "I don't know": 0
-      },
-      "concernsTopLine": {
-        "Yes": 1,
-        "No": 0
-      },
-      "concernsBreakdown": {
-        "Impact on attention span and focus": 1,
-        "Impact on social skills and peer interaction": 1,
-        "Exposure to inappropriate content despite school filters": 1,
-        "Screens replacing hands-on learning, paper-and-pencil work, and handwriting": 1,
-        "School devices undermining family screen time rules at home": 1
-      },
-      "policies": {
-        "Reconsider the 1:1 device model and return to shared devices in K-8": 1,
-        "Paper-and-pencil homework only for elementary school": 1,
-        "Prohibit recreational screen use during the school day": 1,
-        "Require explicit opt-in for generative AI tools": 1,
-        "Guarantee right to opt out of unproven EdTech and AI": 1,
-        "Parental consent for each data-collecting app or website": 1,
-        "Parental access to student device activity": 1,
-        "Invest in teacher training and resources for non-digital instruction": 1
-      }
-    },
     "Hempfield": {
       "totalResponses": 1,
       "byCounty": {
@@ -1175,6 +2359,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 0,
@@ -1197,6 +2418,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -1232,6 +2490,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -1265,6 +2560,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 1,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 1,
         "No": 0
@@ -1295,6 +2627,43 @@
         "No opinion": 0,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 0,
         "No": 1
@@ -1322,6 +2691,43 @@
         "No opinion": 1,
         "I don't know": 0
       },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 1,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 1,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 0,
+        "Poorly": 0,
+        "Neutral": 1,
+        "Well": 0,
+        "Very well": 0
+      },
       "concernsTopLine": {
         "Yes": 0,
         "No": 1
@@ -1342,6 +2748,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,
@@ -1373,6 +2816,43 @@
         "Not enough": 0,
         "No opinion": 0,
         "I don't know": 0
+      },
+      "byGradeBand": {
+        "K-2": {
+          "Too much": 1,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "3-5": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "6-8": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        },
+        "9-12": {
+          "Too much": 0,
+          "Just right": 0,
+          "Not enough": 0,
+          "No opinion": 0,
+          "I don't know": 0
+        }
+      },
+      "commsRating": {
+        "Very poorly": 1,
+        "Poorly": 0,
+        "Neutral": 0,
+        "Well": 0,
+        "Very well": 0
       },
       "concernsTopLine": {
         "Yes": 1,

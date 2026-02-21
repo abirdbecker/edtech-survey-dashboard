@@ -36,23 +36,23 @@ body {
   padding: 2.5rem 1.5rem 1.5rem;
   border-bottom: 2px solid var(--sage);
 }
-.header-inner { max-width: 1000px; margin: 0 auto; }
-.logo-text {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--forest-mid);
+.header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
+.header-main { flex: 1; }
 .header-title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
   font-weight: 800;
   line-height: 1.05;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  margin-top: 0.4rem;
   color: var(--forest);
 }
 .header-subtitle {
@@ -60,6 +60,20 @@ body {
   color: var(--forest-mid);
   margin-top: 0.5rem;
 }
+.header-cta {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.55rem 1.2rem;
+  background: var(--forest);
+  color: var(--cream);
+  border-radius: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.header-cta:hover { background: var(--forest-mid); }
 
 /* ── Main layout ─────────────────────────────────────────── */
 .main-content {

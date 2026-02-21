@@ -5,10 +5,8 @@ export default function Header() {
         <div className="header-logo">
           <span className="logo-text">PA Unplugged</span>
         </div>
-        <h1 className="header-title">Technology in PA Schools</h1>
-        <p className="header-subtitle">
-          Parent Survey Results &mdash; What Pennsylvania families think about school technology &amp; screen time
-        </p>
+        <h1 className="header-title">Screen Time and Technology Use in PA Schools</h1>
+        <p className="header-subtitle">Parent/Caregiver Survey Results</p>
       </div>
     </header>
   );

@@ -15,7 +15,7 @@ export default function Footer({ generated }) {
             PA Unplugged
           </a>
           {' · '}
-          <a href="https://paunplugged.org/survey" target="_blank" rel="noopener noreferrer">
+          <a href="https://survey.paunplugged.org" target="_blank" rel="noopener noreferrer">
             Take the Survey
           </a>
           {' · '}

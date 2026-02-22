@@ -36,6 +36,7 @@ jobs:
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             git commit -m "Update survey data $(date -u +%Y-%m-%d)"
+            git pull --rebase origin main
             git push
             echo "changed=true" >> $GITHUB_OUTPUT
           fi

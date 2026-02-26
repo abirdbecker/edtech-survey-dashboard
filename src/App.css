@@ -82,6 +82,17 @@ body {
   flex-shrink: 0;
 }
 .header-cta:hover { background: var(--forest-mid); }
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+.header-logo {
+  height: 36px;
+  width: auto;
+}
 
 /* ── Main layout ─────────────────────────────────────────── */
 .main-content {

@@ -9,14 +9,19 @@ export default function Header() {
           </h1>
           <p className="header-subtitle">Parent/Caregiver Survey Results</p>
         </div>
-        <a
-          className="header-cta"
-          href="https://survey.paunplugged.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Take the Survey
-        </a>
+        <div className="header-right">
+          <a href="https://www.paunplugged.org" target="_blank" rel="noopener noreferrer">
+            <img src="/logo.png" alt="PA Unplugged" className="header-logo" />
+          </a>
+          <a
+            className="header-cta"
+            href="https://survey.paunplugged.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Take the Survey
+          </a>
+        </div>
       </div>
     </header>
   );

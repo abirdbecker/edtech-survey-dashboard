@@ -20,6 +20,7 @@ export default function DistrictFilter({ districts, selected, onChange }) {
           ✕ Clear
         </button>
       )}
+      <span className="filter-hint">Only districts with survey responses are listed.</span>
     </div>
   );
 }

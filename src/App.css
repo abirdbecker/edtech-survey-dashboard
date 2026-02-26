@@ -153,6 +153,13 @@ body {
   white-space: nowrap;
 }
 .filter-clear:hover { background: var(--warm); color: var(--red); border-color: var(--red); }
+.filter-hint {
+  font-size: 0.75rem;
+  color: var(--forest-mid);
+  opacity: 0.7;
+  flex-basis: 100%;
+  margin-top: 0.1rem;
+}
 
 /* ── Hero section ────────────────────────────────────────── */
 .district-context {
